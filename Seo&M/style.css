@@ -129,9 +129,15 @@ a {
 .top-action {
     padding-top: 37px;
     display: flex;
-    gap: 72px;
+    gap: 27px;
     align-items: center;
 }
+
+.top-action a {
+    display: flex;
+    align-items: center
+}
+
 
 .navigation-link {
     font-family: 'Gilroy-SemiBold';
@@ -178,6 +184,7 @@ a {
     font-size: 15px;
     line-height: 18px;
     color: #AAAAAA;
+    margin-left: 15px;
 }
 
 .top-logos {
