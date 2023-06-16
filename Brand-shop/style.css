@@ -239,13 +239,37 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .center {
-        max-width: 1024px;
-        margin: 0 auto;
+
+    .promo-title {
+        font-size: 44px;
+        line-height: 53px;
     }
 
-    /* .offer-item .big {
-        max-width: 768px;
-    } */
+    .promo-heading {
+        font-size: 24px;
+        line-height: 29px;
+    }
 
+    .promo-info {
+        border-left: 12px solid #F16D7F;
+        height: 92px;
+        padding-left: 16px;
+    }
+
+    .offer {
+        gap: 20px;
+        margin-bottom: 110px;
+    }
+
+    .offer-item-big {
+        min-height: 116px;
+    }
+
+    .featured-content {
+        margin-bottom: 75px;
+    }
+
+    .featured-items {
+        gap: 16px;
+    }
 }
