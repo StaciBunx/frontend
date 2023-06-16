@@ -7,23 +7,34 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
 }
 
 .center {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
+    max-width: 1140px;
+    margin: 0 auto;
+    /* padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px); */
 }
 
+.content {
+    padding-left: 2%;
+    padding-right: 2%;
+}
 
 .header {
-    display: flex;
-    padding-top: 18px;
-    padding-bottom: 19px;
-    gap: 859px;
     background: #222222;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .header-left {
     display: flex;
@@ -40,10 +51,19 @@ a {
 
 .promo {
     display: flex;
-    height: 764px;
-    gap: 92px;
-    margin-bottom: 65px;
+    width: 100%;
     background: #F1E4E6;
+    margin: 0 auto 65px;
+}
+
+.promo-image {
+    width: 50%;
+
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
 }
 
 .promo-title {
@@ -51,13 +71,6 @@ a {
     font-weight: 900;
     font-size: 48px;
     line-height: 58px;
-}
-
-.promo-content {
-    border-left: 12px solid #F16D7F;
-    height: 92px;
-    padding-left: 16px;
-    align-self: center;
 }
 
 .promo-heading {
@@ -68,22 +81,30 @@ a {
     color: #222222;
 }
 
+.promo-info {
+    border-left: 12px solid #F16D7F;
+    height: 92px;
+    padding-left: 16px;
+}
+
+
 .promo-heading-highlight {
     color: #F16D7F;
 
 }
 
+
 .offer {
-    display: flex;
-    flex-flow: wrap;
-    width: 1140px;
+    display: grid;
     gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 96px;
 }
 
 .offer-item {
     position: relative;
 }
+
 
 .offer-content {
     position: absolute;
@@ -95,6 +116,13 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.offer-item-big {
+    min-height: 180px;
+    grid-column: 1 / -1;
+
 }
 
 .offer-text {
@@ -114,6 +142,8 @@ a {
     text-align: center;
     color: #F16D7F;
 }
+
+
 
 .featured-content {
     margin-bottom: 48px;
@@ -144,6 +174,7 @@ a {
     flex-flow: wrap;
     gap: 30px;
     margin-bottom: 48px;
+    justify-content: center;
 }
 
 .featured-item {
@@ -204,5 +235,17 @@ a {
     font-size: 16px;
     line-height: 19px;
     color: #F26376;
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .center {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    /* .offer-item .big {
+        max-width: 768px;
+    } */
 
 }
