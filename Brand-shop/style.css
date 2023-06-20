@@ -49,6 +49,32 @@ a {
     align-items: flex-end;
 }
 
+.basket {
+    position: relative;
+}
+
+.basket::after {
+    position: absolute;
+    content: "5";
+    background: #F16D7F;
+    color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    top: -20%;
+    right: -25%;
+
+}
+
+
 .promo {
     display: flex;
     width: 100%;
@@ -222,6 +248,7 @@ a {
 .button {
     display: flex;
     justify-content: center;
+    margin-bottom: 96px;
 }
 
 .button-content {
@@ -242,11 +269,163 @@ a {
 
 }
 
+.advantages {
+    background: #222224;
+    min-height: 340px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 360px;
+
+}
+
+.advantage-icon {
+    margin-bottom: 28px;
+}
+
+
+.advantages-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.96px;
+    line-height: 24px;
+    text-align: center;
+    color: #FBFBFB;
+    margin-bottom: 16px;
+}
+
+.advantages-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+.subscription {
+    min-height: 448px;
+    background: rgba(244, 244, 244, 0.7);
+    background: url(/img/subscription-background-big.jpg) no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    max-width: 360px;
+    margin-right: 327px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.quote-image {
+    margin-bottom: 30px;
+}
+
+.quote-text {
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+
+}
+
+.subscribe-info {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.subscribe-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    color: #222224;
+}
+
+.subscribe-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #222224;
+}
+
+.subscribe-form-input {
+    background: #E1E1E1;
+    border: none;
+    height: 36px;
+    width: 170px;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #222224;
+    padding: 7px 64px 6px 22px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-button {
+    display: flex;
+    background: #F16D7F;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    color: #FFFFFF;
+    width: 100px;
+    height: 49px;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.footer {
+    background: #222224;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 79px;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 7px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
     .promo-title {
         font-size: 44px;
         line-height: 53px;
+
     }
 
     .promo-heading {
@@ -275,7 +454,27 @@ a {
     .featured-items {
         gap: 16px;
     }
+
+    .advantages {
+        grid-template-columns: none;
+        min-height: 610px;
+        align-content: center;
+        gap: 50px;
+    }
+
+    .subscription {
+        flex-direction: column;
+        min-height: 693px;
+        background: url(/img/subscription-background-medium.jpg) no-repeat center;
+        background-size: cover;
+        gap: 48px;
+    }
+
+    .quote {
+        margin-right: 0;
+    }
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
@@ -349,4 +548,37 @@ a {
     .button {
         margin-bottom: 85px;
     }
+
+    .advantages {
+        grid-template-columns: none;
+        min-height: 610px;
+        align-content: center;
+        gap: 50px;
+    }
+
+    .subscription {
+        flex-direction: column;
+        min-height: 693px;
+        background: url(/img/subscription-background-medium.jpg) no-repeat center;
+        background-size: cover;
+        gap: 48px;
+    }
+
+    .quote {
+        margin-right: 0;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        padding-top: 43px;
+        padding-bottom: 9px;
+    }
+
+
+    .footer-social {
+        order: -1;
+        margin-bottom: 41px;
+    }
+
 }
