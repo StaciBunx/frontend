@@ -427,6 +427,7 @@ ul {
     min-height: 448px;
     background: rgba(244, 244, 244, 0.7);
     background: url(/img/subscription-background-big.jpg) no-repeat center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
