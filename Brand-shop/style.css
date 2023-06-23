@@ -363,6 +363,7 @@ ul {
     display: grid;
     justify-content: center;
     align-items: center;
+    transition: all 0.6s;
 }
 
 .button-text {
@@ -375,7 +376,7 @@ ul {
 }
 
 .button:hover .button-content {
-    background: #F16D7F;
+    background-color: #F16D7F;
     border: 1px solid #FF6A6A;
 }
 
@@ -527,6 +528,8 @@ ul {
     height: 49px;
     justify-content: center;
     border-radius: 0px 30px 30px 0px;
+    transition: all 0.6s;
+
 }
 
 .subscribe-button:hover {
