@@ -35,6 +35,8 @@ ul {
 .header {
     background: #222222;
     min-height: 75px;
+    position: relative;
+
 
 }
 
@@ -43,7 +45,6 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 
@@ -113,9 +114,8 @@ ul {
     color: #F16D7F;
 }
 
-.header-right:hover .mobile-menu {
+.dropdown:hover .mobile-menu {
     visibility: visible;
-
 }
 
 .basket {
