@@ -35,6 +35,11 @@ ul {
 .header {
     background: #222222;
     min-height: 75px;
+
+}
+
+.header-content {
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
