@@ -479,11 +479,15 @@ ul {
     color: #222224;
 }
 
+.subscribe-form {
+    display: flex;
+}
+
 .subscribe-form-input {
     background: #E1E1E1;
     border: none;
-    height: 36px;
-    width: 170px;
+    height: 34px;
+    width: 168px;
     outline: none;
     font-style: normal;
     font-weight: 400;
@@ -494,10 +498,13 @@ ul {
     color: #222224;
     padding: 7px 64px 6px 22px;
     border-radius: 30px 0px 0px 30px;
+    border: 1px solid #E1E1E1;
 }
 
-.subscribe-form {
-    display: flex;
+.subscribe-form-input:focus {
+    border: 1px solid #FF6A6A;
+    border-right: none;
+
 }
 
 .subscribe-button {
@@ -516,6 +523,18 @@ ul {
     height: 49px;
     justify-content: center;
     border-radius: 0px 30px 30px 0px;
+}
+
+.subscribe-button:hover {
+    background-color: white;
+    color: #F26376;
+    border: 1px solid #FF6A6A;
+}
+
+.subscribe-button:active {
+    color: #FFFFFF;
+    background: #db4559;
+    border-color: none;
 }
 
 .footer {
