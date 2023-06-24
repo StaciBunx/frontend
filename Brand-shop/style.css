@@ -738,16 +738,7 @@ ul {
     }
 
     .offer-item-big {
-        min-height: 111px;
-    }
-
-    .offer-img.big {
-        display: none;
-    }
-
-    .offer-img.small {
-        display: block;
-        width: 360px;
+        min-height: 116px;
     }
 
     .featured-content {
