@@ -77,9 +77,14 @@ ul {
 .header {
     background: #222222;
     min-height: 75px;
-    position: relative;
 
 
+}
+
+.fixed {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
 }
 
 .header-content {
@@ -87,6 +92,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 
@@ -191,6 +197,7 @@ ul {
     width: 100%;
     background: #F1E4E6;
     margin: 0 auto 65px;
+    padding-top: 75px;
 }
 
 .promo-image {
