@@ -65,7 +65,7 @@ ul {
 }
 
 .header {
-  background: #222222;
+  background: #222224;
   min-height: 75px;
   position: relative;
 }
@@ -103,7 +103,7 @@ ul {
   top: 75px;
   width: 232px;
   height: 634px;
-  background: #FFFFFF;
+  background: white;
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 32px;
@@ -118,7 +118,6 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
   margin-bottom: 24px;
 }
 
@@ -172,7 +171,6 @@ ul {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #FFFFFF;
   top: -20%;
   right: -25%;
 }
@@ -206,7 +204,6 @@ ul {
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  color: #222222;
 }
 
 .promo-info {
@@ -266,7 +263,7 @@ ul {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
 }
 
 .offer-heading {
@@ -288,7 +285,6 @@ ul {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
-  color: #222222;
   margin-bottom: 6px;
 }
 
@@ -319,7 +315,7 @@ ul {
   position: absolute;
   top: 30%;
   left: 30%;
-  border: 1px solid #fff;
+  border: 1px solid white;
   width: 139px;
   height: 44px;
   font-style: normal;
@@ -330,7 +326,7 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 11px;
-  color: #FFFFFF;
+  color: white;
 }
 
 .featured-item:hover .featured-img {
@@ -351,7 +347,6 @@ ul {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  color: #000000;
 }
 
 .featured-item-text {
@@ -378,7 +373,7 @@ ul {
 }
 
 .button-content {
-  border: 1px solid #FF6A6A;
+  border: 1px solid #F16D7F;
   width: 211px;
   height: 47px;
   display: grid;
@@ -392,12 +387,12 @@ ul {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #F26376;
+  color: #F16D7F;
 }
 
 .button:hover .button-content {
   background-color: #F16D7F;
-  border: 1px solid #FF6A6A;
+  border: 1px solid #F16D7F;
 }
 
 .button:hover .button-text {
@@ -436,7 +431,7 @@ ul {
   font-size: 19.96px;
   line-height: 24px;
   text-align: center;
-  color: #FBFBFB;
+  color: white;
   margin-bottom: 16px;
 }
 
@@ -447,7 +442,7 @@ ul {
   font-size: 13.972px;
   line-height: 17px;
   text-align: center;
-  color: #FBFBFB;
+  color: white;
 }
 
 .subscription {
@@ -481,7 +476,6 @@ ul {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: #222224;
 }
 
 .subscribe-info {
@@ -494,7 +488,6 @@ ul {
   font-weight: 700;
   font-size: 24px;
   line-height: 40px;
-  color: #222224;
 }
 
 .subscribe-heading {
@@ -502,7 +495,6 @@ ul {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #222224;
 }
 
 .subscribe-form {
@@ -510,7 +502,7 @@ ul {
 }
 
 .subscribe-form-input {
-  background: #E1E1E1;
+  background: white;
   border: none;
   height: 34px;
   width: 168px;
@@ -521,14 +513,13 @@ ul {
   line-height: 17px;
   display: flex;
   align-items: center;
-  color: #222224;
   padding: 7px 64px 6px 22px;
   border-radius: 30px 0px 0px 30px;
   border: 1px solid #E1E1E1;
 }
 
 .subscribe-form-input:focus {
-  border: 1px solid #FF6A6A;
+  border: 1px solid #F16D7F;
   border-right: none;
 }
 
@@ -543,7 +534,7 @@ ul {
   align-items: center;
   text-align: center;
   border: none;
-  color: #FFFFFF;
+  color: white;
   width: 100px;
   height: 49px;
   justify-content: center;
@@ -553,13 +544,13 @@ ul {
 
 .subscribe-button:hover {
   background-color: white;
-  color: #F26376;
-  border: 1px solid #FF6A6A;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
 }
 
 .subscribe-button:active {
-  color: #FFFFFF;
-  background: #db4559;
+  color: white;
+  background: #F16D7F;
   border-color: none;
 }
 
