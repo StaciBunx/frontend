@@ -1,0 +1,33 @@
+@import 'vars';
+@import 'mixins';
+
+%font-style {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.highlight {
+    color: $text-color;
+}
+
+.nav {
+    display: flex;
+    gap: $gap;
+
+    &__link {
+        text-decoration: none;
+        @extend %font-style;
+    }
+}
+
+.content {
+    display: flex;
+    gap: $gap;
+    @include display();
+
+    &__item {
+        width: 25%;
+        height: 200px;
+        border: $border;
+    }
+}

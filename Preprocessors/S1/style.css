@@ -1,0 +1,30 @@
+.nav__link {
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+.highlight {
+  color: #8A2BE2;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+.nav__link {
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content__item {
+  width: 25%;
+  height: 200px;
+  border: 1px solid #000;
+}/*# sourceMappingURL=style.css.map */
