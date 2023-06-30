@@ -107,8 +107,7 @@ ul {
   box-sizing: border-box;
   z-index: 1;
 }
-
-.mobile-menu-heading {
+.mobile-menu__heading {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -116,17 +115,17 @@ ul {
   margin-bottom: 24px;
 }
 
-.mobile-menu-list {
-  margin-bottom: 20px;
-}
-
-.mobile-menu-title {
+.mobile-menu__title {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #F16D7F;
   margin-bottom: 12px;
+}
+
+.mobile-menu-list {
+  margin-bottom: 20px;
 }
 
 .mobile-menu-link {
@@ -627,7 +626,7 @@ ul {
     padding-left: 4%;
     padding-right: 4%;
   }
-  .menu-link:not(:first-child) {
+  .header__content-link:not(:first-child) {
     display: none;
   }
   .header-right {
