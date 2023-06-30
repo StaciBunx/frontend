@@ -69,31 +69,28 @@ ul {
   min-height: 75px;
   position: relative;
 }
-
-.fixed {
-  position: fixed;
-  z-index: 10000;
-  width: 100%;
-}
-
-.header-content {
+.header__content {
   min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.header-left {
+.header__content-left {
   display: flex;
   align-items: flex-end;
   gap: 40px;
 }
-
-.header-right {
+.header__content-right {
   display: flex;
   width: 160px;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
 }
 
 .mobile-menu {

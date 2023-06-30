@@ -81,34 +81,35 @@ ul {
     min-height: 75px;
     position: relative;
 
+    &__content {
+        min-height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
+        &-left {
+            display: flex;
+            align-items: flex-end;
+            gap: 40px;
+        }
+
+        &-right {
+            display: flex;
+            width: 160px;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
 }
+
+
+
+
 
 .fixed {
     position: fixed;
     z-index: 10000;
     width: 100%;
-}
-
-.header-content {
-    min-height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.header-left {
-    display: flex;
-    align-items: flex-end;
-    gap: 40px
-}
-
-.header-right {
-    display: flex;
-    width: 160px;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 .mobile-menu {
