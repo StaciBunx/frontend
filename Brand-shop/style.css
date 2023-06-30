@@ -86,12 +86,12 @@ ul {
 .header-left {
   display: flex;
   align-items: flex-end;
-  gap: 41px;
+  gap: 40px;
 }
 
 .header-right {
   display: flex;
-  width: 159px;
+  width: 160px;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -104,9 +104,7 @@ ul {
   width: 232px;
   height: 634px;
   background: white;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 32px;
+  padding: 32px;
   transition: visibility 0.2s;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   box-sizing: border-box;
@@ -183,36 +181,36 @@ ul {
   padding-top: 75px;
 }
 
-.promo-image {
+.promo__image {
   width: 50%;
 }
 
-.promo-content {
+.promo__content {
   display: flex;
   align-items: center;
 }
 
-.promo-title {
+.promo__title {
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
 }
 
-.promo-heading {
+.promo__heading {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
 }
 
-.promo-info {
+.promo__info {
   border-left: 12px solid #F16D7F;
   height: 92px;
   padding-left: 16px;
 }
 
-.promo-heading-highlight {
+.promo__heading-highlight {
   color: #F16D7F;
 }
 
@@ -251,10 +249,6 @@ ul {
 .offer-item-big {
   min-height: 180px;
   grid-column: 1/-1;
-}
-
-.offer-img.small {
-  display: none;
 }
 
 .offer-text {
@@ -428,7 +422,7 @@ ul {
 .advantages-heading {
   font-style: normal;
   font-weight: 400;
-  font-size: 19.96px;
+  font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: white;
@@ -436,10 +430,9 @@ ul {
 }
 
 .advantages-text {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
-  font-size: 13.972px;
+  font-size: 14px;
   line-height: 17px;
   text-align: center;
   color: white;
@@ -503,7 +496,6 @@ ul {
 
 .subscribe-form-input {
   background: white;
-  border: none;
   height: 34px;
   width: 168px;
   outline: none;
@@ -515,7 +507,7 @@ ul {
   align-items: center;
   padding: 7px 64px 6px 22px;
   border-radius: 30px 0px 0px 30px;
-  border: 1px solid #E1E1E1;
+  border: 1px solid white;
 }
 
 .subscribe-form-input:focus {
@@ -530,7 +522,6 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  display: flex;
   align-items: center;
   text-align: center;
   border: none;
