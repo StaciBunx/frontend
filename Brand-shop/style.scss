@@ -349,7 +349,7 @@ ul {
         filter: brightness(0.5);
     }
 
-    .featured__item:hover .featured__add {
+    &__item:hover &__add {
         display: flex;
     }
 
@@ -437,6 +437,28 @@ ul {
     align-items: center;
     min-width: 360px;
 
+    &__icon {
+        margin-bottom: 28px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: white;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: white;
+    }
 }
 
 .swing:hover {
@@ -444,29 +466,6 @@ ul {
     animation-iteration-count: 1;
 }
 
-.advantage-icon {
-    margin-bottom: 28px;
-}
-
-
-.advantages-heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: white;
-    margin-bottom: 16px;
-}
-
-.advantages-text {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    color: white;
-}
 
 .subscription {
     min-height: 448px;
@@ -485,97 +484,102 @@ ul {
     align-items: center;
     justify-items: center;
     align-content: center;
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+
+    }
 }
 
-.quote-image {
-    margin-bottom: 30px;
-}
 
-.quote-text {
-    text-align: center;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
+.subscribe {
 
-}
+    &__info {
+        text-align: center;
+        margin-bottom: 32px;
+    }
 
-.subscribe-info {
-    text-align: center;
-    margin-bottom: 32px;
-}
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+    }
 
-.subscribe-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 40px;
-}
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+    }
 
-.subscribe-heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-}
+    &__form {
+        display: flex;
+    }
 
-.subscribe-form {
-    display: flex;
-}
+    &__form-input {
+        background: white;
+        height: 34px;
+        width: 168px;
+        outline: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        padding: 7px 64px 6px 22px;
+        border-radius: 30px 0px 0px 30px;
+        border: 1px solid white;
+    }
 
-.subscribe-form-input {
-    background: white;
-    height: 34px;
-    width: 168px;
-    outline: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    padding: 7px 64px 6px 22px;
-    border-radius: 30px 0px 0px 30px;
-    border: 1px solid white;
-}
+    &__form-input:focus {
+        border: 1px solid $select-color;
+        border-right: none;
 
-.subscribe-form-input:focus {
-    border: 1px solid $select-color;
-    border-right: none;
+    }
 
-}
+    &__button {
+        display: flex;
+        background: $select-color;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        align-items: center;
+        text-align: center;
+        border: none;
+        color: white;
+        width: 100px;
+        height: 49px;
+        justify-content: center;
+        border-radius: 0px 30px 30px 0px;
+        transition: all 0.6s;
 
-.subscribe-button {
-    display: flex;
-    background: $select-color;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    align-items: center;
-    text-align: center;
-    border: none;
-    color: white;
-    width: 100px;
-    height: 49px;
-    justify-content: center;
-    border-radius: 0px 30px 30px 0px;
-    transition: all 0.6s;
+    }
 
-}
+    &__button:hover {
+        background-color: white;
+        color: $select-color;
+        border: 1px solid $select-color;
+    }
 
-.subscribe-button:hover {
-    background-color: white;
-    color: $select-color;
-    border: 1px solid $select-color;
-}
+    &__button:active {
+        color: white;
+        background: $select-color;
+        border-color: none;
+    }
 
-.subscribe-button:active {
-    color: white;
-    background: $select-color;
-    border-color: none;
 }
 
 .footer {
@@ -586,35 +590,36 @@ ul {
     justify-content: space-evenly;
     min-height: 79px;
     align-items: center;
+
+    &__social {
+        display: flex;
+        gap: 7px;
+    }
+
+    &__social-link {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.6s;
+    }
+
+    &__social-link path {
+        transition: fill 0.6s;
+    }
+
+    &__social-link:hover {
+        background-color: $select-color;
+    }
+
+    &__social-link:hover path {
+        fill: white;
+    }
 }
 
-.footer-social {
-    display: flex;
-    gap: 7px;
-}
-
-.footer-social-link {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.6s;
-}
-
-.footer-social-link path {
-    transition: fill 0.6s;
-}
-
-.footer-social-link:hover {
-    background-color: $select-color;
-}
-
-.footer-social-link:hover path {
-    fill: white;
-}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 

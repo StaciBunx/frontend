@@ -298,7 +298,7 @@ ul {
 .featured__item:hover .featured__img {
   filter: brightness(0.5);
 }
-.featured .featured__item:hover .featured__add {
+.featured__item:hover .featured__add {
   display: flex;
 }
 .featured__item-content {
@@ -373,17 +373,10 @@ ul {
   align-items: center;
   min-width: 360px;
 }
-
-.swing:hover {
-  animation: swing 1s ease;
-  animation-iteration-count: 1;
-}
-
-.advantage-icon {
+.advantage__icon {
   margin-bottom: 28px;
 }
-
-.advantages-heading {
+.advantage__heading {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -392,14 +385,18 @@ ul {
   color: white;
   margin-bottom: 16px;
 }
-
-.advantages-text {
+.advantage__text {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
   color: white;
+}
+
+.swing:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
 }
 
 .subscription {
@@ -420,12 +417,10 @@ ul {
   justify-items: center;
   align-content: center;
 }
-
-.quote-image {
+.quote__image {
   margin-bottom: 30px;
 }
-
-.quote-text {
+.quote__text {
   text-align: center;
   font-family: "Lato";
   font-style: normal;
@@ -435,30 +430,26 @@ ul {
   text-align: center;
 }
 
-.subscribe-info {
+.subscribe__info {
   text-align: center;
   margin-bottom: 32px;
 }
-
-.subscribe-title {
+.subscribe__title {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 40px;
 }
-
-.subscribe-heading {
+.subscribe__heading {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
 }
-
-.subscribe-form {
+.subscribe__form {
   display: flex;
 }
-
-.subscribe-form-input {
+.subscribe__form-input {
   background: white;
   height: 34px;
   width: 168px;
@@ -473,13 +464,11 @@ ul {
   border-radius: 30px 0px 0px 30px;
   border: 1px solid white;
 }
-
-.subscribe-form-input:focus {
+.subscribe__form-input:focus {
   border: 1px solid #F16D7F;
   border-right: none;
 }
-
-.subscribe-button {
+.subscribe__button {
   display: flex;
   background: #F16D7F;
   font-style: normal;
@@ -496,14 +485,12 @@ ul {
   border-radius: 0px 30px 30px 0px;
   transition: all 0.6s;
 }
-
-.subscribe-button:hover {
+.subscribe__button:hover {
   background-color: white;
   color: #F16D7F;
   border: 1px solid #F16D7F;
 }
-
-.subscribe-button:active {
+.subscribe__button:active {
   color: white;
   background: #F16D7F;
   border-color: none;
@@ -517,13 +504,11 @@ ul {
   min-height: 79px;
   align-items: center;
 }
-
-.footer-social {
+.footer__social {
   display: flex;
   gap: 7px;
 }
-
-.footer-social-link {
+.footer__social-link {
   display: block;
   width: 32px;
   height: 32px;
@@ -533,16 +518,13 @@ ul {
   align-items: center;
   transition: background-color 0.6s;
 }
-
-.footer-social-link path {
+.footer__social-link path {
   transition: fill 0.6s;
 }
-
-.footer-social-link:hover {
+.footer__social-link:hover {
   background-color: #F16D7F;
 }
-
-.footer-social-link:hover path {
+.footer__social-link:hover path {
   fill: white;
 }
 
