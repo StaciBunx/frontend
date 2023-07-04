@@ -95,7 +95,7 @@ ul {
 
 .mobile-menu {
   position: absolute;
-  visibility: hidden;
+  visibility: visible;
   right: 0;
   top: 75px;
   width: 232px;
@@ -124,7 +124,7 @@ ul {
   margin-bottom: 12px;
 }
 
-.mobile-menu-list {
+.mobile-menu-list:not(:last-child) {
   margin-bottom: 20px;
 }
 
