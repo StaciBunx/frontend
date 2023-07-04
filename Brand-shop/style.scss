@@ -385,48 +385,39 @@ ul {
 }
 
 
-
-
-
-
-
-
-
 .button {
     display: flex;
     justify-content: center;
     margin-bottom: 96px;
-}
+
+    &__content {
+        border: 1px solid $select-color;
+        width: 211px;
+        height: 47px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.6s;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $select-color;
+
+    }
+
+    &:hover &__content {
+        background-color: $select_color;
+        border: 1px solid $select-color;
+    }
 
 
-
-.button-content {
-    border: 1px solid $select-color;
-    width: 211px;
-    height: 47px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.6s;
-}
-
-.button-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: $select-color;
-
-}
-
-.button:hover .button-content {
-    background-color: $select_color;
-    border: 1px solid $select-color;
-}
-
-
-.button:hover .button-text {
-    color: white;
+    &:hover &__text {
+        color: white;
+    }
 }
 
 .advantages {

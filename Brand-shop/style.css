@@ -333,8 +333,7 @@ ul {
   justify-content: center;
   margin-bottom: 96px;
 }
-
-.button-content {
+.button__content {
   border: 1px solid #F16D7F;
   width: 211px;
   height: 47px;
@@ -343,21 +342,18 @@ ul {
   align-items: center;
   transition: all 0.6s;
 }
-
-.button-text {
+.button__text {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #F16D7F;
 }
-
-.button:hover .button-content {
+.button:hover .button__content {
   background-color: #F16D7F;
   border: 1px solid #F16D7F;
 }
-
-.button:hover .button-text {
+.button:hover .button__text {
   color: white;
 }
 
