@@ -82,9 +82,9 @@ ul {
 }
 .header__content-right {
   display: flex;
-  width: 160px;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 40px;
 }
 
 .fixed {
@@ -95,7 +95,7 @@ ul {
 
 .mobile-menu {
   position: absolute;
-  visibility: visible;
+  visibility: hidden;
   right: 0;
   top: 75px;
   width: 232px;
