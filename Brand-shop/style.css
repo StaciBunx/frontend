@@ -81,8 +81,6 @@ ul {
   flex-direction: row;
   align-items: flex-end;
   justify-content: normal;
-  display: flex;
-  align-items: flex-end;
   gap: 40px;
 }
 .header__content-right {
@@ -150,6 +148,9 @@ ul {
   position: relative;
 }
 .basket::after {
+  display: grid;
+  align-content: center;
+  justify-content: center;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -158,9 +159,6 @@ ul {
   content: "5";
   background: #F16D7F;
   color: white;
-  display: grid;
-  align-content: center;
-  justify-content: center;
   width: 19px;
   height: 19px;
   border-radius: 50%;
@@ -345,12 +343,12 @@ ul {
   margin-bottom: 96px;
 }
 .button__content {
+  display: grid;
+  align-content: center;
+  justify-content: center;
   border: 1px solid #F16D7F;
   width: 211px;
   height: 47px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
   transition: all 0.6s;
 }
 .button__text {

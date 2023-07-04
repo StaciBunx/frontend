@@ -88,8 +88,6 @@ ul {
 
         &-left {
             @include flex (row, flex-end, normal);
-            display: flex;
-            align-items: flex-end;
             gap: 40px;
         }
 
@@ -157,20 +155,17 @@ ul {
     position: relative;
 
     &::after {
+        @include grid(center, center);
         @include font (400, 12px, 14px);
         position: absolute;
         content: "5";
         background: $select-color;
         color: white;
-        display: grid;
-        align-content: center;
-        justify-content: center;
         width: 19px;
         height: 19px;
         border-radius: 50%;
         top: -20%;
         right: -25%;
-
     }
 
 }
@@ -340,12 +335,10 @@ ul {
     margin-bottom: 96px;
 
     &__content {
+        @include grid(center, center);
         border: 1px solid $select-color;
         width: 211px;
         height: 47px;
-        display: grid;
-        justify-content: center;
-        align-items: center;
         transition: all 0.6s;
     }
 
@@ -376,7 +369,6 @@ ul {
 
 .advantage {
     @include flex(column, center, center);
-    min-width: 360px;
 
     &__icon {
         margin-bottom: 28px;
@@ -411,12 +403,10 @@ ul {
 }
 
 .quote {
+    @include gird(center, center);
+    align-items: center;
     max-width: 360px;
     margin-right: 327px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
 
     &__image {
         margin-bottom: 30px;
