@@ -533,11 +533,11 @@ ul {
     font-size: 44px;
     line-height: 53px;
   }
-  .promo__heading {
+  .promo__title__heading {
     font-size: 24px;
     line-height: 29px;
   }
-  .promo__info {
+  .promo__title__info {
     height: 92px;
     padding-left: 16px;
   }
@@ -548,10 +548,10 @@ ul {
   .offer__item-big {
     min-height: 116px;
   }
-  .featured-content {
+  .featured__content {
     margin-bottom: 75px;
   }
-  .featured-items {
+  .featured__items {
     gap: 16px;
   }
   .advantages {
@@ -611,10 +611,10 @@ ul {
   .offer__item-big {
     min-height: 116px;
   }
-  .featured-content {
+  .featured__content {
     margin-bottom: 64px;
   }
-  .featured-items {
+  .featured__items {
     gap: 17px;
     margin-bottom: 42px;
   }
@@ -642,7 +642,7 @@ ul {
     padding-top: 43px;
     padding-bottom: 9px;
   }
-  .footer-social {
+  .footer__social {
     order: -1;
     margin-bottom: 41px;
   }
