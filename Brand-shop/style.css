@@ -132,7 +132,6 @@ ul {
   margin-bottom: 20px;
 }
 .mobile-menu__link {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -151,6 +150,10 @@ ul {
   position: relative;
 }
 .basket::after {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
   position: absolute;
   content: "5";
   background: #F16D7F;
@@ -161,10 +164,6 @@ ul {
   width: 19px;
   height: 19px;
   border-radius: 50%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
   top: -20%;
   right: -25%;
 }
@@ -268,7 +267,7 @@ ul {
 }
 .featured__text {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   line-height: 17px;
   color: #9F9F9F;
@@ -289,16 +288,16 @@ ul {
   background: #F8F8F8;
 }
 .featured__add {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
   position: absolute;
   top: 30%;
   left: 30%;
   border: 1px solid white;
   width: 139px;
   height: 44px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -315,19 +314,19 @@ ul {
   padding: 25px 29px 19px 16px;
 }
 .featured__item-heading {
-  margin-bottom: 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
+  margin-bottom: 16px;
   color: black;
 }
 .featured__item-text {
-  margin-bottom: 16px;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
+  margin-bottom: 16px;
   color: #5D5D5D;
 }
 .featured__item-price {
@@ -433,8 +432,6 @@ ul {
   margin-bottom: 30px;
 }
 .quote__text {
-  text-align: center;
-  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -462,16 +459,18 @@ ul {
   display: flex;
 }
 .subscribe__form-input {
-  background: white;
-  height: 34px;
-  width: 168px;
-  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: normal;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  display: flex;
-  align-items: center;
+  background: white;
+  height: 34px;
+  width: 168px;
+  outline: none;
   padding: 7px 64px 6px 22px;
   border-radius: 30px 0px 0px 30px;
   border: 1px solid white;
@@ -482,18 +481,19 @@ ul {
 }
 .subscribe__button {
   display: flex;
-  background: #F16D7F;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  align-items: center;
+  background: #F16D7F;
   text-align: center;
   border: none;
   color: white;
   width: 100px;
   height: 49px;
-  justify-content: center;
   border-radius: 0px 30px 30px 0px;
   transition: all 0.6s;
 }
@@ -509,25 +509,26 @@ ul {
 }
 
 .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   background: #222224;
   color: white;
-  display: flex;
-  justify-content: space-evenly;
   min-height: 79px;
-  align-items: center;
 }
 .footer__social {
   display: flex;
   gap: 7px;
 }
 .footer__social-link {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: background-color 0.6s;
 }
 .footer__social-link path {

@@ -122,18 +122,12 @@ ul {
     z-index: 1;
 
     &__heading {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
+        @include font (700, 14px, 17px);
         margin-bottom: 24px;
     }
 
     &__title {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        @include font (400, 14px, 17px);
         color: $select-color;
         margin-bottom: 12px;
     }
@@ -143,11 +137,7 @@ ul {
     }
 
     &__link {
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 28px;
+        @include font (400, 14px, 28px);
         color: #6F6E6E;
         margin-left: 32px;
     }
@@ -167,6 +157,7 @@ ul {
     position: relative;
 
     &::after {
+        @include font (400, 12px, 14px);
         position: absolute;
         content: "5";
         background: $select-color;
@@ -177,10 +168,6 @@ ul {
         width: 19px;
         height: 19px;
         border-radius: 50%;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
         top: -20%;
         right: -25%;
 
@@ -206,17 +193,11 @@ ul {
     }
 
     &__title {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
+        @include font (900, 48px, 58px);
     }
 
     &__heading {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
+        @include font (700, 32px, 38px);
     }
 
     &__heading-highlight {
@@ -265,19 +246,13 @@ ul {
     }
 
     &__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
+        @include font (400, 16px, 19px);
         text-align: center;
         color: white;
     }
 
     &__heading {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
+        @include font (700, 24px, 28px);
         text-align: center;
         color: $select_color;
     }
@@ -285,25 +260,18 @@ ul {
 
 
 .featured {
-
     &__content {
         margin-bottom: 48px;
         text-align: center;
     }
 
     &__heading {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 36px;
+        @include font (400, 30px, 36px);
         margin-bottom: 6px;
     }
 
     &__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        @include font (700, 14px, 17px);
         color: $featured-text-color;
     }
 
@@ -322,16 +290,13 @@ ul {
     }
 
     &__add {
+        @include font (400, 14px, 17px);
         position: absolute;
         top: 30%;
         left: 30%;
         border: 1px solid white;
         width: 139px;
         height: 44px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
         display: none;
         align-items: center;
         justify-content: center;
@@ -352,28 +317,19 @@ ul {
     }
 
     &__item-heading {
+        @include font (400, 13px, 16px);
         margin-bottom: 16px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 16px;
         color: black;
     }
 
     &__item-text {
+        @include font (300, 14px, 17px);
         margin-bottom: 16px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
         color: $featured-item-text-color;
     }
 
     &__item-price {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
+        @include font (400, 16px, 19px);
         color: $select-color;
     }
 }
@@ -394,10 +350,7 @@ ul {
     }
 
     &__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
+        @include font (400, 16px, 19px);
         color: $select-color;
 
     }
@@ -430,20 +383,14 @@ ul {
     }
 
     &__heading {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
+        @include font (400, 20px, 24px);
         text-align: center;
         color: white;
         margin-bottom: 16px;
     }
 
     &__text {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
+        @include font (300, 14px, 17px);
         text-align: center;
         color: white;
     }
@@ -476,12 +423,7 @@ ul {
     }
 
     &__text {
-        text-align: center;
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
+        @include font (400, 20px, 24px);
         text-align: center;
 
     }
@@ -496,17 +438,11 @@ ul {
     }
 
     &__title {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 40px;
+        @include font (700, 24px, 40px);
     }
 
     &__heading {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
+        @include font (400, 18px, 30px);
     }
 
     &__form {
@@ -514,16 +450,12 @@ ul {
     }
 
     &__form-input {
+        @include flex (row, center, normal);
+        @include font (400, 14px, 17px);
         background: white;
         height: 34px;
         width: 168px;
         outline: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        display: flex;
-        align-items: center;
         padding: 7px 64px 6px 22px;
         border-radius: 30px 0px 0px 30px;
         border: 1px solid white;
@@ -536,12 +468,9 @@ ul {
     }
 
     &__button {
-        @include flex (center, center);
+        @include flex (row, center, center);
+        @include font (400, 14px, 17px);
         background: $select-color;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
         text-align: center;
         border: none;
         color: white;
