@@ -165,7 +165,6 @@ ul {
 }
 
 
-
 .basket {
     position: relative;
 
@@ -192,54 +191,46 @@ ul {
 }
 
 
-
 .promo {
     display: flex;
     width: 100%;
     background: $promo-bg;
     margin: 0 auto 65px;
     padding-top: 75px;
+
+    &__image {
+        width: 50%;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    &__heading-highlight {
+        color: $select-color;
+    }
+
+    &__info {
+        border-left: 12px solid $select-color;
+        height: 92px;
+        padding-left: 16px;
+    }
 }
-
-.promo__image {
-    width: 50%;
-
-}
-
-.promo__content {
-    display: flex;
-    align-items: center;
-}
-
-.promo__title {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 58px;
-}
-
-
-
-
-.promo__heading {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-}
-
-.promo__info {
-    border-left: 12px solid $select-color;
-    height: 92px;
-    padding-left: 16px;
-}
-
-
-.promo__heading-highlight {
-    color: $select-color;
-
-}
-
 
 .animate-grow {
     animation: animate_grow 2s infinite;
