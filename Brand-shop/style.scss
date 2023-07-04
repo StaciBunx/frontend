@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 @keyframes animate_grow {
     0% {
@@ -82,21 +83,18 @@ ul {
     position: relative;
 
     &__content {
+        @include flex(row, center, space-between);
         min-height: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
         &-left {
+            @include flex (row, flex-end, normal);
             display: flex;
             align-items: flex-end;
             gap: 40px;
         }
 
         &-right {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            @include flex (row, flex-end, space-between);
             gap: 40px;
 
         }
@@ -203,8 +201,8 @@ ul {
     }
 
     &__content {
-        display: flex;
-        align-items: center;
+        @include flex(row, center, normal);
+
     }
 
     &__title {
@@ -258,15 +256,12 @@ ul {
     }
 
     &__content {
+        @include flex (column, center, center);
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     &__text {
@@ -313,18 +308,17 @@ ul {
     }
 
     &__items {
-        display: flex;
+        @include flex (row, normal, center);
         flex-flow: wrap;
         gap: 30px;
         margin-bottom: 48px;
-        justify-content: center;
     }
 
     &__item {
+        position: relative;
         width: 360px;
         height: 581px;
         background: $featured-item-bg;
-        position: relative;
     }
 
     &__add {
@@ -386,8 +380,7 @@ ul {
 
 
 .button {
-    display: flex;
-    justify-content: center;
+    @include flex(row, normal, center);
     margin-bottom: 96px;
 
     &__content {
@@ -422,7 +415,6 @@ ul {
 
 .advantages {
     background: $default-bg-black;
-    ;
     min-height: 340px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -430,11 +422,7 @@ ul {
 }
 
 .advantage {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
     min-width: 360px;
 
     &__icon {
@@ -468,13 +456,11 @@ ul {
 
 
 .subscription {
+    @include flex(row, center, center);
     min-height: 448px;
     background: rgba(244, 244, 244, 0.7);
     background: url(/img/subscription-background-big.jpg) no-repeat center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .quote {
@@ -550,19 +536,17 @@ ul {
     }
 
     &__button {
-        display: flex;
+        @include flex (center, center);
         background: $select-color;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        align-items: center;
         text-align: center;
         border: none;
         color: white;
         width: 100px;
         height: 49px;
-        justify-content: center;
         border-radius: 0px 30px 30px 0px;
         transition: all 0.6s;
 
@@ -583,13 +567,10 @@ ul {
 }
 
 .footer {
+    @include flex (row, center, space-evenly);
     background: $default-bg-black;
-    ;
     color: white;
-    display: flex;
-    justify-content: space-evenly;
     min-height: 79px;
-    align-items: center;
 
     &__social {
         display: flex;
@@ -597,13 +578,10 @@ ul {
     }
 
     &__social-link {
-        display: block;
+        @include flex(row, center, center);
         width: 32px;
         height: 32px;
         background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: background-color 0.6s;
     }
 
@@ -636,9 +614,7 @@ ul {
             height: 92px;
             padding-left: 16px;
         }
-
     }
-
 
     .offer {
         gap: 20px;

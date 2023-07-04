@@ -70,20 +70,26 @@ ul {
   position: relative;
 }
 .header__content {
-  min-height: 75px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  min-height: 75px;
 }
 .header__content-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: normal;
   display: flex;
   align-items: flex-end;
   gap: 40px;
 }
 .header__content-right {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 40px;
 }
 
@@ -175,7 +181,9 @@ ul {
 }
 .promo__content {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: normal;
 }
 .promo__title {
   font-style: normal;
@@ -220,15 +228,15 @@ ul {
   grid-column: 1/-1;
 }
 .offer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .offer__text {
   font-style: normal;
@@ -267,16 +275,18 @@ ul {
 }
 .featured__items {
   display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: center;
   flex-flow: wrap;
   gap: 30px;
   margin-bottom: 48px;
-  justify-content: center;
 }
 .featured__item {
+  position: relative;
   width: 360px;
   height: 581px;
   background: #F8F8F8;
-  position: relative;
 }
 .featured__add {
   position: absolute;
@@ -330,6 +340,8 @@ ul {
 
 .button {
   display: flex;
+  flex-direction: row;
+  align-items: normal;
   justify-content: center;
   margin-bottom: 96px;
 }
@@ -368,9 +380,8 @@ ul {
 .advantage {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-width: 360px;
 }
 .advantage__icon {
@@ -400,13 +411,14 @@ ul {
 }
 
 .subscription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   min-height: 448px;
   background: rgba(244, 244, 244, 0.7);
   background: url(/img/subscription-background-big.jpg) no-repeat center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .quote {
