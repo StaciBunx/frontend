@@ -114,7 +114,6 @@ ul {
   line-height: 17px;
   margin-bottom: 24px;
 }
-
 .mobile-menu__title {
   font-style: normal;
   font-weight: 400;
@@ -123,12 +122,10 @@ ul {
   color: #F16D7F;
   margin-bottom: 12px;
 }
-
-.mobile-menu-list:not(:last-child) {
+.mobile-menu__list:not(:last-child) {
   margin-bottom: 20px;
 }
-
-.mobile-menu-link {
+.mobile-menu__link {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -137,11 +134,9 @@ ul {
   color: #6F6E6E;
   margin-left: 32px;
 }
-
-.mobile-menu-link:hover {
+.mobile-menu__link:hover {
   color: #F16D7F;
 }
-
 .dropdown:hover .mobile-menu {
   visibility: visible;
 }
@@ -149,7 +144,6 @@ ul {
 .basket {
   position: relative;
 }
-
 .basket::after {
   position: absolute;
   content: "5";

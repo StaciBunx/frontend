@@ -130,64 +130,67 @@ ul {
         line-height: 17px;
         margin-bottom: 24px;
     }
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $select-color;
+        margin-bottom: 12px;
+    }
+
+    &__list:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        color: #6F6E6E;
+        margin-left: 32px;
+    }
+
+    &__link:hover {
+        color: $select-color;
+    }
+
+    .dropdown:hover & {
+        visibility: visible;
+    }
+
 }
 
-.mobile-menu__title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: $select-color;
-    margin-bottom: 12px;
-}
 
-
-.mobile-menu-list:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-
-.mobile-menu-link {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 28px;
-    color: #6F6E6E;
-    margin-left: 32px;
-}
-
-.mobile-menu-link:hover {
-    color: $select-color;
-}
-
-.dropdown:hover .mobile-menu {
-    visibility: visible;
-}
 
 .basket {
     position: relative;
+
+    &::after {
+        position: absolute;
+        content: "5";
+        background: $select-color;
+        color: white;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        top: -20%;
+        right: -25%;
+
+    }
+
 }
 
-.basket::after {
-    position: absolute;
-    content: "5";
-    background: $select-color;
-    color: white;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    top: -20%;
-    right: -25%;
-
-}
 
 
 .promo {
