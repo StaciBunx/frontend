@@ -1,0 +1,23 @@
+@import 'vars';
+@import 'mixins';
+
+
+.product {
+    padding-top: 75px;
+
+    &__header {
+        min-height: 148px;
+        background-color: #F8F3F4;
+    }
+}
+
+.slider {
+    height: 777px;
+    background-color: #F7F7F7;
+}
+
+.product__info {
+    width: 1141px;
+    height: 601px;
+    border: 1px solid #EAEAEA;
+}

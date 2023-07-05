@@ -404,7 +404,7 @@ ul {
 }
 
 .quote {
-    @include gird(center, center);
+    @include grid(center, center);
     align-items: center;
     max-width: 360px;
     margin-right: 327px;

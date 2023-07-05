@@ -1,3 +1,22 @@
+.product {
+  padding-top: 75px;
+}
+.product__header {
+  min-height: 148px;
+  background-color: #F8F3F4;
+}
+
+.slider {
+  height: 777px;
+  background-color: #F7F7F7;
+}
+
+.product__info {
+  width: 1141px;
+  height: 601px;
+  border: 1px solid #EAEAEA;
+}
+
 @keyframes animate_grow {
   0% {
     transform: scale3d(1, 1, 1);
@@ -379,7 +398,6 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 360px;
 }
 .advantage__icon {
   margin-bottom: 28px;
@@ -419,12 +437,12 @@ ul {
 }
 
 .quote {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   max-width: 360px;
   margin-right: 327px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
 }
 .quote__image {
   margin-bottom: 30px;
