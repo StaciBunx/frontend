@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'mixins';
+@import 'product';
 
 @keyframes animate_grow {
     0% {
@@ -615,7 +616,6 @@ ul {
             justify-content: flex-end;
         }
     }
-
 
 
     .offer {
