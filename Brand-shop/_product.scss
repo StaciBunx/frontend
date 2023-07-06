@@ -41,9 +41,100 @@
     }
 
 
+    &__info {
+        margin-bottom: 130px;
+
+        &_description {
+            @include flex(column, center, normal);
+            padding: 65px;
+            width: 1110px;
+            height: 470px;
+            border: 1px solid #EAEAEA;
+            background-color: white;
+
+            &_heading {
+                @include font(300, 14px, normal);
+                color: $select_color;
+                text-align: center;
+                margin-bottom: 27px;
+            }
+
+            &_title {
+                @include font(300, 18px, normal);
+                color: #4D4D4D;
+                text-align: center;
+                margin-bottom: 47px;
+            }
+
+            &_text {
+                @include font(300, 14px, normal);
+                max-width: 555px;
+                text-align: center;
+                margin-bottom: 32px;
+
+            }
+
+            &_price {
+                @include font (300, 24px, normal);
+                color: #EF5B70;
+                text-align: center;
+                margin-bottom: 130px;
+            }
+
+            &_filters {
+                @include flex(row, center, center);
+                gap: 42px;
+                margin-bottom: 47px;
+            }
+
+            &_filter {
+                @include font(400, 14px, normal);
+                color: #6F6E6E;
+            }
+
+            &_summary {
+                display: block;
+            }
+
+            &_summary::-webkit-details-marker {
+                display: none;
+            }
+
+            // &_summary::after {
+            // content: '';
+            // width: 10px;
+            // height: 5px;
+            // background: url(./img/summary-close.svg);
+            // background-size: cover;
+
+            // }
+        }
+    }
+}
+
+summary::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: url(./img/summary-close.svg) no-repeat;
+    background-size: cover;
+    margin-left: 9px;
+    margin-bottom: 3px;
+
 
 }
 
+details[open]>summary::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: url(./img/summary-close.svg) no-repeat;
+    background-size: cover;
+    margin-left: 9px;
+    margin-bottom: 3px;
+}
 
 
 .slider {
@@ -85,12 +176,6 @@
 
 }
 
-.product__content {
-    width: 1141px;
-    height: 601px;
-    border: 1px solid #EAEAEA;
-    margin-bottom: 130px;
-}
 
 
 .product-featured__items {
