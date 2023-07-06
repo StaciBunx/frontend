@@ -28,6 +28,11 @@
 
             &_link:last-child {
                 color: $select_color;
+                font-weight: 600;
+            }
+
+            &_link:not(:last-child)::after {
+                content: '\  /  '
             }
         }
 

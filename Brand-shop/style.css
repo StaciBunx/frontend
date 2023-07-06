@@ -28,6 +28,10 @@
 }
 .product__header_breadcrumbs_link:last-child {
   color: #F16D7F;
+  font-weight: 600;
+}
+.product__header_breadcrumbs_link:not(:last-child)::after {
+  content: "  /  ";
 }
 
 .breadcrumbs__link {
