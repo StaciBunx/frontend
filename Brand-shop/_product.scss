@@ -56,7 +56,16 @@
                 @include font(300, 14px, normal);
                 color: $select_color;
                 text-align: center;
-                margin-bottom: 27px;
+                margin-bottom: 15px;
+            }
+
+            &_heading::after {
+                content: '';
+                display: block;
+                margin: 12px auto 0;
+                width: 63px;
+                height: 3px;
+                background: $select-color;
             }
 
             &_title {
@@ -78,7 +87,19 @@
                 @include font (300, 24px, normal);
                 color: #EF5B70;
                 text-align: center;
-                margin-bottom: 130px;
+                margin-bottom: 65px;
+
+            }
+
+            &_price::after {
+                content: '';
+                display: block;
+                margin: 65px auto 0;
+                width: 641px;
+                height: 1px;
+                background: #EAEAEA;
+
+
             }
 
             &_filters {
@@ -90,6 +111,18 @@
             &_filter {
                 @include font(400, 14px, normal);
                 color: #6F6E6E;
+            }
+
+            &_button {
+                @include flex(row, center, center);
+                width: 212px;
+                height: 48.406px;
+                flex-shrink: 0;
+                border: 1px $select_color solid;
+                background-color: white;
+                color: $select_color;
+                gap: 23px;
+
             }
         }
     }
@@ -103,7 +136,6 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-
 summary::after {
     content: '';
     display: inline-block;
@@ -113,8 +145,6 @@ summary::after {
     background-size: cover;
     margin-left: 9px;
     margin-bottom: 3px;
-
-
 }
 
 details[open]>summary::after {
