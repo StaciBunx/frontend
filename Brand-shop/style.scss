@@ -406,6 +406,7 @@ ul {
 .quote {
     @include grid(center, center);
     align-items: center;
+    justify-items: center;
     max-width: 360px;
     margin-right: 327px;
 
@@ -512,6 +513,7 @@ ul {
     &__social-link:hover {
         background-color: $select-color;
     }
+
 
     &__social-link:hover path {
         fill: white;
