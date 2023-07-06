@@ -250,7 +250,7 @@ ul {
     &__heading {
         @include font (700, 24px, 28px);
         text-align: center;
-        color: $select_color;
+        color: $select-color;
     }
 }
 

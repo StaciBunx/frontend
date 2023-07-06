@@ -8,16 +8,61 @@
     &__header {
         min-height: 148px;
         background-color: #F8F3F4;
+
+        &_content {
+            @include flex(row, center, space-between);
+            min-height: 148px;
+        }
+
+        &_link {
+            @include font (400, 24px, normal);
+            color: $select_color;
+        }
+
+        &_breadcrumbs {
+
+            &_link {
+                @include font(300, 14px, normal);
+                color: #636363;
+            }
+
+            &_link:last-child {
+                color: $select_color;
+            }
+        }
+
+    }
+
+
+
+}
+
+.breadcrumbs {
+
+    &__link {
+        @include font(300, 14px, normal);
+        color: #636363;
+
     }
 }
 
 .slider {
     height: 777px;
     background-color: #F7F7F7;
+
 }
 
-.product__info {
+.product__content {
     width: 1141px;
     height: 601px;
     border: 1px solid #EAEAEA;
+    margin-bottom: 130px;
+}
+
+
+.product-featured__items {
+    @include flex (row, normal, center);
+    flex-flow: wrap;
+    gap: 30px;
+    margin-bottom: 130px;
 }
