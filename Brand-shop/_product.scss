@@ -91,26 +91,18 @@
                 @include font(400, 14px, normal);
                 color: #6F6E6E;
             }
-
-            &_summary {
-                display: block;
-            }
-
-            &_summary::-webkit-details-marker {
-                display: none;
-            }
-
-            // &_summary::after {
-            // content: '';
-            // width: 10px;
-            // height: 5px;
-            // background: url(./img/summary-close.svg);
-            // background-size: cover;
-
-            // }
         }
     }
 }
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
 
 summary::after {
     content: '';

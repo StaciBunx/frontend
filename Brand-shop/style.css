@@ -100,10 +100,12 @@
   line-height: normal;
   color: #6F6E6E;
 }
-.product__info_description_summary {
+
+summary {
   display: block;
 }
-.product__info_description_summary::-webkit-details-marker {
+
+summary::-webkit-details-marker {
   display: none;
 }
 
