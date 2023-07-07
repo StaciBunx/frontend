@@ -40,106 +40,104 @@
 
     }
 
-
     &__info {
-        margin-bottom: 130px;
+        @include flex(column, center, normal);
+        position: relative;
+        margin: -65px auto 130px;
+        z-index: 10;
+        padding: 65px 0;
+        max-width: $content-width;
+        border: 1px solid #EAEAEA;
+        background-color: white;
 
-        &_description {
-            @include flex(column, center, normal);
-            padding: 65px;
-            width: 1110px;
-            height: 470px;
-            border: 1px solid #EAEAEA;
+        &_heading {
+            @include font(300, 14px, normal);
+            color: $select_color;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &_heading::after {
+            content: '';
+            display: block;
+            margin: 12px auto 0;
+            width: 63px;
+            height: 3px;
+            background: $select-color;
+        }
+
+        &_title {
+            @include font(300, 18px, normal);
+            color: #4D4D4D;
+            text-align: center;
+            margin-bottom: 47px;
+        }
+
+        &_text {
+            @include font(300, 14px, normal);
+            max-width: 555px;
+            text-align: center;
+            margin-bottom: 32px;
+
+        }
+
+        &_price {
+            @include font (300, 24px, normal);
+            color: $select_color;
+            text-align: center;
+            margin-bottom: 65px;
+
+        }
+
+        &_price::after {
+            content: '';
+            display: block;
+            margin: 65px auto 0;
+            width: 641px;
+            height: 1px;
+            background: #EAEAEA;
+
+
+        }
+
+        &_filters {
+            @include flex(row, center, center);
+            gap: 42px;
+            margin-bottom: 47px;
+        }
+
+        &_filter {
+            @include font(400, 14px, normal);
+            color: #6F6E6E;
+        }
+
+        &_button {
+            @include flex(row, center, center);
+            width: 212px;
+            height: 48.406px;
+            flex-shrink: 0;
+            border: 1px $select_color solid;
             background-color: white;
+            color: $select_color;
+            gap: 23px;
+            transition: all 0.6s;
 
-            &_heading {
-                @include font(300, 14px, normal);
-                color: $select_color;
-                text-align: center;
-                margin-bottom: 15px;
-            }
+        }
 
-            &_heading::after {
-                content: '';
-                display: block;
-                margin: 12px auto 0;
-                width: 63px;
-                height: 3px;
-                background: $select-color;
-            }
+        &_button:hover {
+            background-color: $select_color;
+            color: white;
+        }
 
-            &_title {
-                @include font(300, 18px, normal);
-                color: #4D4D4D;
-                text-align: center;
-                margin-bottom: 47px;
-            }
+        &__button path {
+            transition: fill 0.6s;
+        }
 
-            &_text {
-                @include font(300, 14px, normal);
-                max-width: 555px;
-                text-align: center;
-                margin-bottom: 32px;
-
-            }
-
-            &_price {
-                @include font (300, 24px, normal);
-                color: #EF5B70;
-                text-align: center;
-                margin-bottom: 65px;
-
-            }
-
-            &_price::after {
-                content: '';
-                display: block;
-                margin: 65px auto 0;
-                width: 641px;
-                height: 1px;
-                background: #EAEAEA;
-
-
-            }
-
-            &_filters {
-                @include flex(row, center, center);
-                gap: 42px;
-                margin-bottom: 47px;
-            }
-
-            &_filter {
-                @include font(400, 14px, normal);
-                color: #6F6E6E;
-            }
-
-            &_button {
-                @include flex(row, center, center);
-                width: 212px;
-                height: 48.406px;
-                flex-shrink: 0;
-                border: 1px $select_color solid;
-                background-color: white;
-                color: $select_color;
-                gap: 23px;
-                transition: all 0.6s;
-
-            }
-
-            &_button:hover {
-                background-color: $select_color;
-                color: white;
-            }
-
-            &__button path {
-                transition: fill 0.6s;
-            }
-
-            &_button:hover path {
-                fill: white;
-            }
+        &_button:hover path {
+            fill: white;
         }
     }
+
 }
 
 summary {

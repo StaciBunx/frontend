@@ -36,20 +36,19 @@
   margin-right: 6px;
 }
 .product__info {
-  margin-bottom: 130px;
-}
-.product__info_description {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: normal;
-  padding: 65px;
-  width: 1110px;
-  height: 470px;
+  position: relative;
+  margin: -65px auto 130px;
+  z-index: 10;
+  padding: 65px 0;
+  max-width: 1140px;
   border: 1px solid #EAEAEA;
   background-color: white;
 }
-.product__info_description_heading {
+.product__info_heading {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -58,7 +57,7 @@
   text-align: center;
   margin-bottom: 15px;
 }
-.product__info_description_heading::after {
+.product__info_heading::after {
   content: "";
   display: block;
   margin: 12px auto 0;
@@ -66,7 +65,7 @@
   height: 3px;
   background: #F16D7F;
 }
-.product__info_description_title {
+.product__info_title {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
@@ -75,7 +74,7 @@
   text-align: center;
   margin-bottom: 47px;
 }
-.product__info_description_text {
+.product__info_text {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -84,16 +83,16 @@
   text-align: center;
   margin-bottom: 32px;
 }
-.product__info_description_price {
+.product__info_price {
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: normal;
-  color: #EF5B70;
+  color: #F16D7F;
   text-align: center;
   margin-bottom: 65px;
 }
-.product__info_description_price::after {
+.product__info_price::after {
   content: "";
   display: block;
   margin: 65px auto 0;
@@ -101,7 +100,7 @@
   height: 1px;
   background: #EAEAEA;
 }
-.product__info_description_filters {
+.product__info_filters {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -109,14 +108,14 @@
   gap: 42px;
   margin-bottom: 47px;
 }
-.product__info_description_filter {
+.product__info_filter {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: normal;
   color: #6F6E6E;
 }
-.product__info_description_button {
+.product__info_button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -130,14 +129,14 @@
   gap: 23px;
   transition: all 0.6s;
 }
-.product__info_description_button:hover {
+.product__info_button:hover {
   background-color: #F16D7F;
   color: white;
 }
-.product__info_description__button path {
+.product__info__button path {
   transition: fill 0.6s;
 }
-.product__info_description_button:hover path {
+.product__info_button:hover path {
   fill: white;
 }
 
