@@ -172,9 +172,9 @@ details[open] > summary::after {
 
 .slider {
   height: 777px;
+  position: relative;
   justify-content: center;
   background-color: #F7F7F7;
-  position: relative;
 }
 .slider::before {
   content: "";
