@@ -5,4 +5,56 @@
     height: 134px;
     display: flex;
     align-items: center;
+
+
+}
+
+.filter {
+
+
+    &__summary {
+        @include font(600, 14px, normal);
+        color: #000;
+        display: flex;
+        gap: 11px;
+        align-items: center;
+    }
+
+    &:first-child {
+        margin-right: 320px;
+    }
+}
+
+.sort-box {
+    display: flex;
+    gap: 48px;
+}
+
+.sort {
+    &__summary {
+        @include font (400, 14px, normal);
+        color: #6F6E6E;
+    }
+
+    &>summary::after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        background: url(./img/summary-close.svg) no-repeat;
+        background-size: cover;
+        margin-left: 9px;
+        margin-bottom: 3px;
+    }
+
+    &[open]>summary::after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        background: url(./img/summary-close.svg) no-repeat;
+        background-size: cover;
+        margin-left: 9px;
+        margin-bottom: 3px;
+    }
 }

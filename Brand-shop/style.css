@@ -220,6 +220,53 @@ summary::-webkit-details-marker {
   align-items: center;
 }
 
+.filter__summary {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: normal;
+  color: #000;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.filter:first-child {
+  margin-right: 320px;
+}
+
+.sort-box {
+  display: flex;
+  gap: 48px;
+}
+
+.sort__summary {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  color: #6F6E6E;
+}
+.sort > summary::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url(./img/summary-close.svg) no-repeat;
+  background-size: cover;
+  margin-left: 9px;
+  margin-bottom: 3px;
+}
+.sort[open] > summary::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url(./img/summary-close.svg) no-repeat;
+  background-size: cover;
+  margin-left: 9px;
+  margin-bottom: 3px;
+}
+
 @keyframes animate_grow {
   0% {
     transform: scale3d(1, 1, 1);
