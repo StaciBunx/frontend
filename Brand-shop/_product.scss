@@ -140,36 +140,6 @@
 
 }
 
-summary {
-    display: block;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-summary::after {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 5px;
-    background: url(./img/summary-close.svg) no-repeat;
-    background-size: cover;
-    margin-left: 9px;
-    margin-bottom: 3px;
-}
-
-details[open]>summary::after {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 5px;
-    background: url(./img/summary-close.svg) no-repeat;
-    background-size: cover;
-    margin-left: 9px;
-    margin-bottom: 3px;
-}
-
 
 .slider {
     height: 777px;

@@ -1,0 +1,37 @@
+@import 'vars';
+@import 'mixins';
+
+// общее обнуление стилей
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+// стилизация фильтров на странице product.html
+
+.product__info_filter>summary::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: url(./img/summary-close.svg) no-repeat;
+    background-size: cover;
+    margin-left: 9px;
+    margin-bottom: 3px;
+}
+
+.product__info_filter[open]>summary::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: url(./img/summary-close.svg) no-repeat;
+    background-size: cover;
+    margin-left: 9px;
+    margin-bottom: 3px;
+}

@@ -1,2 +1,8 @@
 @import 'vars';
 @import 'mixins';
+
+.filter-sort {
+    height: 134px;
+    display: flex;
+    align-items: center;
+}

@@ -1,3 +1,33 @@
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.product__info_filter > summary::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url(./img/summary-close.svg) no-repeat;
+  background-size: cover;
+  margin-left: 9px;
+  margin-bottom: 3px;
+}
+
+.product__info_filter[open] > summary::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url(./img/summary-close.svg) no-repeat;
+  background-size: cover;
+  margin-left: 9px;
+  margin-bottom: 3px;
+}
+
 .product {
   padding-top: 75px;
 }
@@ -140,36 +170,6 @@
   fill: white;
 }
 
-summary {
-  display: block;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 5px;
-  background: url(./img/summary-close.svg) no-repeat;
-  background-size: cover;
-  margin-left: 9px;
-  margin-bottom: 3px;
-}
-
-details[open] > summary::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 5px;
-  background: url(./img/summary-close.svg) no-repeat;
-  background-size: cover;
-  margin-left: 9px;
-  margin-bottom: 3px;
-}
-
 .slider {
   height: 777px;
   position: relative;
@@ -212,6 +212,12 @@ details[open] > summary::after {
   flex-flow: wrap;
   gap: 30px;
   margin-bottom: 130px;
+}
+
+.filter-sort {
+  height: 134px;
+  display: flex;
+  align-items: center;
 }
 
 @keyframes animate_grow {
