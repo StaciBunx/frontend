@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'product';
+@import 'catalog';
 
 @keyframes animate_grow {
     0% {
@@ -399,7 +400,7 @@ ul {
     @include flex(row, center, center);
     min-height: 448px;
     background: rgba(244, 244, 244, 0.7);
-    background: url(/img/subscription-background-big.jpg) no-repeat center;
+    background: url(./img/subscription-background-big.jpg) no-repeat center;
     background-size: cover;
 }
 
