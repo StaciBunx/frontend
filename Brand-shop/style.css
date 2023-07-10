@@ -307,7 +307,7 @@ summary::-webkit-details-marker {
   color: #C4C4C4;
   position: relative;
   position: absolute;
-  right: 55px;
+  right: 60px;
 }
 .pagination__nav:first-child {
   position: absolute;
