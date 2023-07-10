@@ -233,7 +233,12 @@ summary::-webkit-details-marker {
 .filter:first-child {
   margin-right: 320px;
 }
-
+.filter[open] summary {
+  color: #F16D7F;
+}
+.filter[open] path {
+  fill: #F16D7F;
+}
 .sort-box {
   display: flex;
   gap: 48px;
