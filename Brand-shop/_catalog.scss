@@ -1,6 +1,30 @@
 @import 'vars';
 @import 'mixins';
 
+#burger {
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+}
+
+.checkbox__mobile-menu {
+    position: absolute;
+    top: 75px;
+    background: white;
+    width: 232px;
+    height: 634px;
+    padding: 32px;
+    transition: display 0.2s;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    box-sizing: border-box;
+}
+
+#burger:checked~.checkbox__mobile-menu {
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
 .filter-sort {
     height: 132px;
     position: relative;
@@ -191,8 +215,6 @@
         background-color: #e9ecef;
     }
 }
-
-
 
 .pagination {
     width: 283px;
