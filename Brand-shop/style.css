@@ -446,9 +446,14 @@ summary::-webkit-details-marker {
   line-height: normal;
   color: #C4C4C4;
   position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
 }
 .pagination__link-active {
   color: #EF5B70;
+}
+.pagination__link:hover {
+  transform: scale(120%);
 }
 .pagination__item:last-child::before {
   content: "......";
@@ -465,11 +470,18 @@ summary::-webkit-details-marker {
   position: absolute;
   top: 15px;
   left: 15px;
+  transition: transform 0.3s;
+}
+.pagination__nav:first-child:hover {
+  transform: scale(120%);
 }
 .pagination__nav:last-child {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+.pagination__nav:last-child:hover {
+  transform: scale(120%);
 }
 
 @keyframes animate_grow {

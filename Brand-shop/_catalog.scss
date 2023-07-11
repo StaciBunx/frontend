@@ -234,9 +234,16 @@
         @include font (300, 16px, normal);
         color: #C4C4C4;
         position: relative;
+        display: inline-block;
+        transition: transform 0.3s;
+
 
         &-active {
             color: #EF5B70;
+        }
+
+        &:hover {
+            transform: scale(120%);
         }
     }
 
@@ -247,17 +254,27 @@
         position: relative;
         position: absolute;
         right: 60px;
+
     }
 
     &__nav:first-child {
         position: absolute;
         top: 15px;
         left: 15px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(120%);
+        }
     }
 
     &__nav:last-child {
         position: absolute;
         top: 15px;
         right: 15px;
+
+        &:hover {
+            transform: scale(120%);
+        }
     }
 }
