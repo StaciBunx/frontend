@@ -2,36 +2,76 @@
 @import 'mixins';
 
 .filter-sort {
-    height: 134px;
-    display: flex;
-    align-items: center;
+    height: 132px;
+    position: relative;
 }
 
 .filter {
+    width: 360px;
+    position: absolute;
+    top: 39px;
+    box-sizing: border-box;
+    padding: 13px 16px 16px 0;
+    z-index: 10;
 
+    &[open] {
+        background: #FFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding-left: 16px;
 
-    &__summary {
-        @include font(600, 14px, normal);
-        color: #000;
-        display: flex;
-        gap: 11px;
-        align-items: center;
     }
 
-    &:first-child {
-        margin-right: 320px;
-    }
-
-    &[open] summary {
+    &[open] .filter__heading {
         color: $select-color;
-
     }
 
     &[open] path {
         fill: $select-color;
     }
 
-    &__content {}
+    &__summary {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+    }
+
+    &__heading {
+        @include font(600, 14px, normal);
+    }
+
+    &__item {
+        margin-top: 16px;
+
+        &[open] .filter__subheading {
+            color: $select-color;
+        }
+    }
+
+    &__subheading {
+        @include font(400, 14px, normal);
+        color: #6F6E6E;
+        padding: 8px 11px 11px;
+        border-bottom: #EBEBEB 1px solid;
+        border-left: $select-color 5px solid;
+
+    }
+
+    &__link-box {
+        @include flex(column, normal, normal);
+        gap: 11px;
+        padding: 24px 16px;
+    }
+
+    &__link {
+        @include font(400, 14px, normal);
+        color: #6F6E6E;
+    }
+
+
+    &:first-child {
+        margin-right: 320px;
+    }
+
 }
 
 .sort-box {
