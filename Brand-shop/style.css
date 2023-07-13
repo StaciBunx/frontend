@@ -536,9 +536,9 @@ summary::-webkit-details-marker {
   font-size: 18px;
   line-height: normal;
   color: #656565;
-  box-sizing: border-box;
   width: 44px;
   height: 25px;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   border: 1px solid #EAEAEA;
   text-indent: 16px;
@@ -554,6 +554,62 @@ summary::-webkit-details-marker {
 }
 .cart__close:hover path {
   fill: #F16D7F;
+}
+
+.address__heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: normal;
+  color: #222;
+  margin-bottom: 21px;
+}
+.address__form {
+  display: grid;
+  gap: 22px;
+}
+.address__input {
+  width: 360px;
+  height: 44px;
+  text-indent: 16px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #A4A4A4;
+  outline: none;
+}
+.address__input:focus {
+  outline: 2px solid #F16D7F;
+  border-color: #F16D7F;
+}
+.address__input::-moz-placeholder {
+  color: #222;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.address__input::placeholder {
+  color: #222;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.address__button {
+  width: 100px;
+  height: 35px;
+  color: #4A4A4A;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #A4A4A4;
 }
 
 @keyframes animate_grow {
