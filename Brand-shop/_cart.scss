@@ -1,0 +1,68 @@
+@import 'vars';
+@import 'mixins';
+
+.cart {
+    padding-top: 96px;
+    padding-bottom: 128px;
+
+    &__box {
+        display: grid;
+    }
+
+    &__item {
+        display: flex;
+        width: 652px;
+        height: 306px;
+        box-shadow: 17px 19px 24px 0px #00000021;
+    }
+
+    &__item_content {
+        padding: 22px 31px 62px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        @include font(400, 24px, normal);
+        color: #222;
+        margin-bottom: 42px;
+    }
+
+    &__text {
+        @include font(400, 22px, normal);
+        color: #575757;
+
+        &_price {
+            color: $select-color;
+        }
+    }
+
+    &__text:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__input {
+        @include font(400, 18px, normal);
+        color: #656565;
+        box-sizing: border-box;
+        width: 44px;
+        height: 25px;
+        background-color: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        text-indent: 16px;
+        margin-left: 24px;
+
+
+        &:focus {
+            outline: 2px solid $select-color;
+        }
+    }
+
+
+
+}
