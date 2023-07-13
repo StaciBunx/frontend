@@ -487,15 +487,18 @@ summary::-webkit-details-marker {
 .cart {
   padding-top: 96px;
   padding-bottom: 128px;
+  display: grid;
 }
 .cart__box {
   display: grid;
+  gap: 40px;
 }
 .cart__item {
   display: flex;
   width: 652px;
   height: 306px;
   box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.1294117647);
+  position: relative;
 }
 .cart__item_content {
   padding: 22px 31px 62px;
@@ -525,7 +528,7 @@ summary::-webkit-details-marker {
 }
 .cart__quantity {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
 }
 .cart__input {
   font-style: normal;
@@ -543,6 +546,14 @@ summary::-webkit-details-marker {
 }
 .cart__input:focus {
   outline: 2px solid #F16D7F;
+}
+.cart__close {
+  position: absolute;
+  right: 22px;
+  top: 28px;
+}
+.cart__close:hover path {
+  fill: #F16D7F;
 }
 
 @keyframes animate_grow {

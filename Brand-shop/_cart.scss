@@ -4,9 +4,12 @@
 .cart {
     padding-top: 96px;
     padding-bottom: 128px;
+    display: grid;
+
 
     &__box {
         display: grid;
+        gap: 40px;
     }
 
     &__item {
@@ -14,6 +17,7 @@
         width: 652px;
         height: 306px;
         box-shadow: 17px 19px 24px 0px #00000021;
+        position: relative;
     }
 
     &__item_content {
@@ -43,7 +47,7 @@
 
     &__quantity {
         display: flex;
-        align-items: baseline;
+        align-items: flex-end;
     }
 
     &__input {
@@ -63,6 +67,16 @@
         }
     }
 
+    &__close {
+        position: absolute;
+        right: 22px;
+        top: 28px;
+
+        &:hover path {
+            fill: $select-color;
+
+        }
+    }
 
 
 }
