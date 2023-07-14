@@ -133,3 +133,64 @@
 
     }
 }
+
+.summary {
+    width: 360px;
+    height: 214px;
+    background-color: #F5F3F3;
+    padding: 39px 43px 42px 44px;
+    box-sizing: border-box;
+
+
+
+    &__subtotal,
+    &__subtotal_price {
+        @include font(400, 11px, normal);
+        color: #4A4A4A;
+    }
+
+    &__subtotal_box,
+    &__total_box {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+    }
+
+    &__subtotal_box {
+        margin-bottom: 12px;
+    }
+
+    &__total_box {
+        margin-bottom: 21px;
+    }
+
+
+    &__total {
+        @include font(300, 16px, normal);
+        color: #222;
+
+        &_price {
+            @include font(700, 16px, normal);
+            color: $select-color;
+
+        }
+    }
+
+
+    &__checkout {
+        height: 58px;
+        border-top: 1px solid #E2E2E2;
+        padding-top: 17px;
+    }
+
+    &__button {
+        @include flex(row, center, center);
+        @include font(300, 16px, normal);
+        width: 273px;
+        height: 50px;
+        background-color: $select-color;
+        color: white;
+
+    }
+
+}
