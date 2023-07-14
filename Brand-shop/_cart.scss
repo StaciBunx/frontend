@@ -10,6 +10,7 @@
     &__box {
         display: grid;
         gap: 40px;
+        margin-bottom: 72px;
     }
 
     &__item {
@@ -78,6 +79,26 @@
         }
     }
 
+    &__button_box {
+        display: flex;
+        gap: 192px;
+    }
+
+    &__button {
+        color: #000;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        width: 225px;
+        height: 50px;
+        flex-shrink: 0;
+        background-color: white;
+        box-sizing: border-box;
+        border: 1px solid #A4A4A4;
+
+    }
 
 }
 
