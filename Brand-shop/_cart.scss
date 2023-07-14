@@ -7,14 +7,8 @@
 
 
     &__box {
-        margin-bottom: 72px;
         display: flex;
         gap: 128px;
-    }
-
-    &__items {
-        display: grid;
-        gap: 40px;
     }
 
     &__item {
@@ -23,7 +17,16 @@
         height: 306px;
         box-shadow: 17px 19px 24px 0px #00000021;
         position: relative;
+        margin-bottom: 72px;
+
     }
+
+    &__item:first-child {
+        margin-bottom: 40px;
+    }
+
+
+
 
     &__item_content {
         padding: 22px 31px 62px;

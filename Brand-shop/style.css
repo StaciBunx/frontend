@@ -489,13 +489,8 @@ summary::-webkit-details-marker {
   padding-bottom: 128px;
 }
 .cart__box {
-  margin-bottom: 72px;
   display: flex;
   gap: 128px;
-}
-.cart__items {
-  display: grid;
-  gap: 40px;
 }
 .cart__item {
   display: flex;
@@ -503,6 +498,10 @@ summary::-webkit-details-marker {
   height: 306px;
   box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.1294117647);
   position: relative;
+  margin-bottom: 72px;
+}
+.cart__item:first-child {
+  margin-bottom: 40px;
 }
 .cart__item_content {
   padding: 22px 31px 62px;
