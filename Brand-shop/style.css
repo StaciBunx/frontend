@@ -805,6 +805,27 @@ summary::-webkit-details-marker {
   background-color: #F16D7F;
   gap: 20px;
 }
+.registration__heading, .registration__text, .registration__item {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+}
+.registration__heading, .registration__text {
+  margin-bottom: 22px;
+}
+.registration__list {
+  display: grid;
+  gap: 16px;
+}
+.registration__item::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url(./img/registration_tip_item.svg);
+  margin-right: 23px;
+}
 
 .custom-radio {
   position: absolute;

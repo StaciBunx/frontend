@@ -75,6 +75,33 @@
         background-color: $select-color;
         gap: 20px
     }
+
+    &__heading,
+    &__text,
+    &__item {
+        @include font(300, 24px, normal);
+    }
+
+
+    &__heading,
+    &__text {
+        margin-bottom: 22px;
+    }
+
+    &__list {
+        display: grid;
+        gap: 16px;
+    }
+
+    &__item::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+        background-image: url(./img/registration_tip_item.svg);
+        margin-right: 23px;
+    }
+
 }
 
 
