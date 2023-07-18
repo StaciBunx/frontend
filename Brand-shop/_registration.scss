@@ -47,7 +47,7 @@
     &__input {
         height: 44px;
         text-indent: 16px;
-        border: 1px solid #A4A4A4;
+        border: 1px solid #EAEAEA;
 
         &::placeholder {
             color: #B1B1B1;
@@ -56,6 +56,11 @@
             font-style: normal;
             font-weight: 300;
             line-height: normal;
+        }
+
+
+        &:focus {
+            outline: 2px solid $select-color;
         }
     }
 
@@ -73,7 +78,18 @@
         border: none;
         color: white;
         background-color: $select-color;
-        gap: 20px
+        gap: 20px;
+        transition: all 0.6s;
+
+        &:hover {
+            background-color: white;
+            color: $select-color;
+            border: 1px solid $select-color;
+        }
+
+        &:hover path {
+            fill: $select-color;
+        }
     }
 
     &__heading,
