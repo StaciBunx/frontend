@@ -718,6 +718,156 @@ summary::-webkit-details-marker {
   border: 1px solid #F16D7F;
 }
 
+.registration {
+  display: grid;
+  grid-template-columns: 360px 652px;
+  gap: 130px;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.registration__box {
+  display: grid;
+}
+.registration__form {
+  display: flex;
+  flex-direction: column;
+}
+.registration__gender {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.registration__gender_box {
+  display: flex;
+  gap: 10px;
+}
+.registration__label {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: normal;
+  display: grid;
+  gap: 21px;
+  margin-bottom: 33px;
+}
+.registration__label_gender {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: normal;
+}
+.registration__label:nth-child(3) {
+  margin-bottom: 15px;
+}
+.registration__input {
+  height: 44px;
+  text-indent: 16px;
+  border: 1px solid #A4A4A4;
+}
+.registration__input::-moz-placeholder {
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input::placeholder {
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__password_tip {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: normal;
+  color: #B1B1B1;
+  margin-bottom: 40px;
+}
+.registration__button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 167px;
+  border: none;
+  color: white;
+  background-color: #F16D7F;
+  gap: 20px;
+}
+
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled + label::before {
+  background-color: #e9ecef;
+}
+
 @keyframes animate_grow {
   0% {
     transform: scale3d(1, 1, 1);
