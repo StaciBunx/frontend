@@ -215,6 +215,24 @@ summary::-webkit-details-marker {
   margin-bottom: 130px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider {
+    height: 624px;
+  }
+  .slider::before, .slider::after {
+    top: 287px;
+  }
+  .product__info {
+    border-right: none;
+    border-left: none;
+  }
+  .product-featured__items {
+    gap: 16px;
+  }
+  .featured__item:last-child {
+    display: none;
+  }
+}
 #burger {
   position: absolute;
   left: -999999px;

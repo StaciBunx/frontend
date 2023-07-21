@@ -1,4 +1,4 @@
-summary {
+/* summary {
     display: block;
 }
 
@@ -17,4 +17,46 @@ summary::-webkit-details-marker {
 
 .details[open]>summary::before {
     content: '\2193';
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 32px;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+@media (max-width:1024px) and (min-width: 768px) {
+    html {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 24px;
+    }
+
+
 }
