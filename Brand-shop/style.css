@@ -552,6 +552,36 @@ summary::-webkit-details-marker {
     margin-bottom: 63px;
   }
 }
+@media (max-width: 767px) {
+  .filter-sort {
+    height: 81px;
+  }
+  .filter {
+    padding: 0;
+    top: 24px;
+  }
+  .filter:first-child {
+    margin-right: 62px;
+  }
+  .filter__heading {
+    display: none;
+  }
+  .filter__summary > svg {
+    width: 38px;
+    height: 25px;
+  }
+  .sort {
+    left: 130px;
+    top: 24px;
+    padding: 0;
+  }
+  .sort__summary {
+    font-size: 12px;
+  }
+  .pagination {
+    margin-bottom: 64px;
+  }
+}
 .cart {
   padding-top: 96px;
   padding-bottom: 128px;
