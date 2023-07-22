@@ -789,7 +789,7 @@ summary::-webkit-details-marker {
 }
 .registration {
   display: grid;
-  grid-template-columns: 360px 652px;
+  grid-template-columns: 360px 1fr;
   gap: 130px;
   padding-top: 64px;
   padding-bottom: 96px;
@@ -971,6 +971,20 @@ summary::-webkit-details-marker {
   background-color: #e9ecef;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .registration {
+    gap: 22px;
+  }
+  .registration__heading, .registration__text, .registration__item {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: normal;
+  }
+  .registration__list {
+    gap: 27px;
+  }
+}
 @keyframes animate_grow {
   0% {
     transform: scale3d(1, 1, 1);
