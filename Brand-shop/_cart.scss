@@ -283,3 +283,89 @@
 
     }
 }
+
+@media (max-width:767px) {
+    .cart {
+        padding-top: 39px;
+        padding-bottom: 96px;
+
+        &__box {
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+        }
+
+        &__item {
+            width: 358px;
+            height: 188px;
+            margin-bottom: 30px;
+
+            &_content {
+                padding: 13px 17px 38px;
+            }
+        }
+
+        &__heading {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 14px;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+
+        &__button_box {
+            gap: 9px;
+        }
+
+        &__input {
+            font-size: 10px;
+            color: #656565;
+            width: 24px;
+            height: 15px;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            text-indent: 9px;
+            margin-left: 15px;
+        }
+
+        &__close {
+            position: absolute;
+            right: 12px;
+            top: 18px;
+            width: 10px;
+            height: 11px;
+
+            &:hover path {
+                fill: $select-color;
+
+            }
+        }
+
+        &__button {
+            box-sizing: border-box;
+            height: 33px;
+            width: 175px;
+            text-transform: lowercase;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
+    .address__button {
+        text-transform: lowercase;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+    }
+}
