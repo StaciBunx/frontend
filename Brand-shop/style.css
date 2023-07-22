@@ -741,6 +741,29 @@ summary::-webkit-details-marker {
   border: 1px solid #F16D7F;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+  }
+  .cart__item {
+    min-width: 734px;
+  }
+  .cart__button_box {
+    justify-content: center;
+  }
+  .cart__info {
+    display: flex;
+    gap: 16px;
+  }
+  .address {
+    margin-top: none;
+  }
+  .summary {
+    margin-top: 56px;
+  }
+}
 @keyframes wiggle {
   0%, 7% {
     transform: rotateZ(0);

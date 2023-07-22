@@ -249,3 +249,37 @@
     }
 
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cart {
+
+        &__box {
+            flex-direction: column;
+            align-items: center;
+            gap: 65px;
+        }
+
+        &__item {
+            min-width: 734px;
+        }
+
+        &__button_box {
+            justify-content: center;
+        }
+
+        &__info {
+            display: flex;
+            gap: 16px;
+        }
+    }
+
+    .address {
+        margin-top: none;
+    }
+
+    .summary {
+        margin-top: 56px;
+
+    }
+}
