@@ -985,6 +985,28 @@ summary::-webkit-details-marker {
     gap: 27px;
   }
 }
+@media (max-width: 767px) {
+  .product__header_content {
+    justify-content: center;
+  }
+  .registration {
+    grid-template-columns: auto;
+    padding-top: 40px;
+    gap: 40px;
+  }
+  .registration__heading, .registration__text, .registration__item {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: normal;
+  }
+  .registration__heading {
+    margin-bottom: 32px;
+  }
+  .registration__list {
+    gap: 22px;
+  }
+}
 @keyframes animate_grow {
   0% {
     transform: scale3d(1, 1, 1);
@@ -1627,7 +1649,7 @@ ul {
   }
   .subscription {
     flex-direction: column;
-    min-height: 693px;
+    min-height: 555px;
     background: url(/img/subscription-background-medium.jpg) no-repeat center;
     background-size: cover;
     gap: 48px;

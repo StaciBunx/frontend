@@ -230,7 +230,32 @@
         &__list {
             gap: 27px;
         }
+    }
+}
 
+@media (max-width:767px) {
 
+    .product__header_content {
+        justify-content: center;
+    }
+
+    .registration {
+        grid-template-columns: auto;
+        padding-top: 40px;
+        gap: 40px;
+
+        &__heading,
+        &__text,
+        &__item {
+            @include font(300, 16px, normal);
+        }
+
+        &__heading {
+            margin-bottom: 32px;
+        }
+
+        &__list {
+            gap: 22px;
+        }
     }
 }
