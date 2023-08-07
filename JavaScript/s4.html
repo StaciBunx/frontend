@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar 4</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        // Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+        // 0 – это ноль
+        // 1 – нечетное число
+        // 2 – четное число
+        // 3 – нечетное число
+        // …
+        // 10 – четное число
+
+
+        for (let i = 0; i <= 10; i++) {
+            console.log((i === 0) ? `${i} - это ноль` : (i % 2 === 0) ? `${i} - четное число` : `${i} - нечетное число`);
+        }
+
+
+
+        // Задание 2
+        // Дан массив [1, 2, 3, 4, 5, 6, 7]
+        // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
+
+        const array1 = [1, 2, 3, 4, 5, 6, 7];
+        array1.splice(3, 2)
+        console.log(array1);
+
+
+        // Задание 3
+        // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+        // 1. Рассчитать сумму элементов этого массива
+        // 2. Найти минимальное число
+        // 3. Найти есть ли в этом массиве число 3
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function getRandomArray(max_length, max_random) {
+            const array = [];
+            for (let i = 0; i < max_length; i++) {
+                array[i] = getRandomInt(max_random);
+            }
+            return array;
+        }
+
+        function getSum(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+
+        function getMin(array) {
+            let min = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            return min;
+        }
+
+        function findNum(array, num) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === num) {
+                    console.log(`Число ${num} есть в массиве!`);
+                    return
+                }
+            }
+            console.log('Числа в массиве нет.');
+        }
+
+        myarray = getRandomArray(5, 10)
+        console.log(myarray);
+        console.log(`Сумма элементов массива составляет ${getSum(myarray)}`);
+        console.log(`Минимальное число ${getMin(myarray)}`);
+        findNum(myarray, 3);
+
+
+
+        // *Необязательное задание. *
+        // Необходимо вывести горку в консоль (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5.
+
+        let x = '';
+        for (let i = 0; i < 20; i++) {
+            x += 'x';
+            console.log(x);
+        }
+
+
+    </script>
+</body>
+
+</html>
