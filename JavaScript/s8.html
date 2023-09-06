@@ -68,16 +68,41 @@
         const body = document.querySelector('body');
 
         body.addEventListener('click', function (event) {
+            const tag = event.target.tagName.toLowerCase();
             if (event.target.classList.contains('super_element')) {
-                const tag = event.target.tagName.toLowerCase();
                 console.log(`Класс "super_element" присутствует в элементе "${tag}"`);
+            } else {
+                console.log(`Класс "super_element" отсутствует в элементе "${tag}"`);
             }
         })
 
         // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 
+        const textarea = document.querySelector('textarea');
 
+        textarea.addEventListener('mouseover', () => {
+            console.log('Вы навели на textarea');
+        })
 
+        // 5. Необходимо повесить событие клика на тег ul. В обработчике события в консоль необходимо выводить текст, который записан внутри элемента кнопки, по которой был произведен клик. Если клик был не по кнопке, то ничего выводить не нужно. Необходимо использовать делегирование.
+
+        const ul = document.querySelector('ul');
+
+        ul.addEventListener('click', (event) => {
+            console.log(event.target.textContent);
+        })
+
+        // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
+
+        // ОТВЕТ: Потому что в задании 3 дольше идет фаза всплытия: li>ul>>body, а в задании 5 только li>ul. Поэтому сообщение появляется раньше.
+
+        // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+
+        const list = document.querySelectorAll('li:nth-child(2n)');
+        console.log(list);
+        list.forEach(element => {
+            element.style.backgroundColor = 'red';
+        });
     </script>
 </body>
 
