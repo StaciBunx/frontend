@@ -81,10 +81,13 @@
             event.preventDefault();
             inputs.forEach(input => {
                 if (!input.value) {
+
                     input.classList.add('error');
+
                 } else {
                     input.classList.remove('error');
                 }
+                console.log(input);
             });
         }
         );

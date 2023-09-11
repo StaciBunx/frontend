@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.headline {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+}
+
+.card__body {
+    text-align: center;
+}
+
+.card__title {
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.card__id {
+    color: gray;
+    font-size: 12px;
+}
+
+.card__thumbnail {
+    margin-bottom: 15px;
+}
