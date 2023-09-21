@@ -34,8 +34,4 @@ data.forEach(({ id, name, age, url }) => {
     subtitle.classList.add('card-subtitle');
     subtitle.textContent = age;
     cardBody.appendChild(subtitle);
-
-
-
-
 });

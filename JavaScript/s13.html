@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .big {
+            background: #ccc;
+            height: 300px;
+        }
+
+        .box {
+            background: lightgreen;
+            height: 40px;
+        }
+    </style>
+    <title>Пример – Element.scrollIntoView()</title>
+</head>
+
+<body>
+    <button type="button">Нажми на меня</button>
+    <div class="big"></div>
+    <div id="box" class="box">Скрытый элемент</div>
+
+    <script>
+        const hiddenElement = document.getElementById('box')
+        const button = document.querySelector('button')
+
+        const handleButtonClick = () => {
+            hiddenElement.scrollIntoView({ block: 'center', behavior: 'smooth' })
+        }
+
+        button.addEventListener('click', handleButtonClick)
+
+    </script>
+</body

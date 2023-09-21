@@ -1,16 +1,16 @@
 async function fetchData() {
-    try {
-        const response = await fetch("data.json");
-        console.log(response);
-        if (!response.ok) {
-            throw new Error("Не удалось получить данные с data JSON");
-        }
-        const data = await response.json();
-        console.log(data);
-        const productBox = document.querySelector(".product_box");
+  try {
+    const response = await fetch("data.json");
+    console.log(response);
+    if (!response.ok) {
+      throw new Error("Не удалось получить данные с data JSON");
+    }
+    const data = await response.json();
+    console.log(data);
+    const productBox = document.querySelector(".product_box");
 
-        data.forEach(({ name, image, price, color, size, quantity }) => {
-            const productEl = `
+    data.forEach(({ name, image, price, color, size, quantity }) => {
+      const productEl = `
           <div class="product">
           <button class="btn__del">Удалить</button>
           <div class="content">
@@ -29,19 +29,19 @@ async function fetchData() {
             </div>
           </div>
         </div>`;
-            productBox.insertAdjacentHTML("beforeend", productEl);
-        });
+      productBox.insertAdjacentHTML("beforeend", productEl);
+    });
 
-        const btns = document.querySelectorAll(".btn__del");
-        btns.forEach((el) => {
-            el.addEventListener("click", () => {
-                const product = el.closest(".product");
-                product.remove();
-            });
-        });
-    } catch (error) {
-        console.error(error);
-    }
+    const btns = document.querySelectorAll(".btn__del");
+    btns.forEach((el) => {
+      el.addEventListener("click", () => {
+        const product = el.closest(".product");
+        product.remove();
+      });
+    });
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 fetchData();
