@@ -26,51 +26,47 @@
             </div>
 
             <div class="header__content-right">
-                <label for="burger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="23" viewBox="0 0 32 23" fill="none">
-                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8" />
-                    </svg>
-                </label>
-                <input type="checkbox" name="burger" id="burger" checked>
-                <div class="checkbox__mobile-menu ">
-                    <h3 class="mobile-menu__heading">MENU</h3>
-                    <a href="#" class="mobile-menu__title">MAN</a>
-                    <ul class="mobile-menu__list">
-                        <li><a href="#" class="mobile-menu__link">Accessories</a></li>
-                        <li><a href="#" class="mobile-menu__link">Bags</a></li>
-                        <li><a href="" class="mobile-menu__link">Denim</a></li>
-                        <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
-                    </ul>
+                <div class="dropdown">
+                    <a href="#" class="header__content-link"><img src="./img/menu-icon.svg" alt="menu icon"></a>
+                    <div class="mobile-menu ">
+                        <h3 class="mobile-menu__heading">MENU</h3>
+                        <a href="#" class="mobile-menu__title">MAN</a>
+                        <ul class="mobile-menu__list">
+                            <li><a href="#" class="mobile-menu__link">Accessories</a></li>
+                            <li><a href="#" class="mobile-menu__link">Bags</a></li>
+                            <li><a href="" class="mobile-menu__link">Denim</a></li>
+                            <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
+                        </ul>
 
-                    <a href="#" class="mobile-menu__title">WOMAN</a>
-                    <ul class="mobile-menu__list">
-                        <li><a href="#" class="mobile-menu__link">Accessories</a></li>
-                        <li><a href="#" class="mobile-menu__link">Jackets & Coats</a></li>
-                        <li><a href="" class="mobile-menu__link">Polos</a></li>
-                        <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
-                        <li><a href="#" class="mobile-menu__link">Shirts</a></li>
-                    </ul>
+                        <a href="#" class="mobile-menu__title">WOMAN</a>
+                        <ul class="mobile-menu__list">
+                            <li><a href="#" class="mobile-menu__link">Accessories</a></li>
+                            <li><a href="#" class="mobile-menu__link">Jackets & Coats</a></li>
+                            <li><a href="" class="mobile-menu__link">Polos</a></li>
+                            <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
+                            <li><a href="#" class="mobile-menu__link">Shirts</a></li>
+                        </ul>
 
-                    <a href="#" class="mobile-menu__title">KIDS</a>
-                    <ul class="mobile-menu__list">
-                        <li><a href="#" class="mobile-menu__link">Accessories</a></li>
-                        <li><a href="#" class="mobile-menu__link">Jackets & Coats</a></li>
-                        <li><a href="" class="mobile-menu__link">Polos</a></li>
-                        <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
-                        <li><a href="#" class="mobile-menu__link">Shirts</a></li>
-                        <li><a href="#" class="mobile-menu__link">Bags</a></li>
-                    </ul>
+                        <a href="#" class="mobile-menu__title">KIDS</a>
+                        <ul class="mobile-menu__list">
+                            <li><a href="#" class="mobile-menu__link">Accessories</a></li>
+                            <li><a href="#" class="mobile-menu__link">Jackets & Coats</a></li>
+                            <li><a href="" class="mobile-menu__link">Polos</a></li>
+                            <li><a href="#" class="mobile-menu__link">T-Shirts</a></li>
+                            <li><a href="#" class="mobile-menu__link">Shirts</a></li>
+                            <li><a href="#" class="mobile-menu__link">Bags</a></li>
+                        </ul>
+                    </div>
                 </div>
-
                 <a href="#" class="header__content-link"><img src="./img/profile-icon.svg" alt="profile icon"></a>
-                <a href="./cart.html" class="header__content-link basket"><img src="./img/basket-icon.svg"
-                        alt="basket icon"></a>
+                <a href="./cart.html" class="header__content-link basket">
+                    <img src="./img/basket-icon.svg" alt="basket icon" id="basket">
+                    <div class="basket_num">0</div>
+                </a>
 
             </div>
-
         </div>
     </header>
-
     <main>
         <section class="product">
             <header class="product__header">
@@ -105,28 +101,7 @@
                         </svg>
                     </div>
 
-                    <div class="cart__item">
-                        <img src="./img/cart/cart-img-2.jpg" alt="product image">
-                        <div class="cart__item_content">
-                            <h2 class="cart__heading">MANGO PEOPLE <br>T-SHIRT</h2>
-                            <p class="cart__text">Price: <span class="cart__text_price">$300</span></p>
-                            <p class="cart__text">Color: Red</p>
-                            <p class="cart__text">Size: Xl</p>
 
-                            <div class="cart__quantity">
-                                <label for="quantity2" class="cart__label">
-                                    <span class="cart__text">Quantity:</span>
-                                </label>
-                                <input type="number" name="" id="quantity2" min="0" value="2" class="cart__input">
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
-                            class="cart__close">
-                            <path
-                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                                fill="#575757" />
-                        </svg>
-                    </div>
 
                     <div class="cart__button_box">
                         <button class="cart__button">CLEAR SHOPPING CART</button>
@@ -229,7 +204,7 @@
             </a>
         </div>
     </footer>
-
+    <script src="./index.js"></script>
 </body>
 
 </html>

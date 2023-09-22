@@ -72,6 +72,14 @@ ul {
 
 }
 
+.cart__contatiner {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 .center {
     max-width: $content-width;
     margin: 0 auto;
@@ -159,7 +167,7 @@ ul {
 .basket {
     position: relative;
 
-    &::after {
+    &_num {
         @include grid(center, center);
         @include font (400, 12px, 14px);
         position: absolute;
@@ -174,7 +182,6 @@ ul {
     }
 
 }
-
 
 .promo {
     display: flex;
@@ -302,6 +309,7 @@ ul {
         justify-content: center;
         gap: 11px;
         color: white;
+        cursor: pointer;
     }
 
     &__item:hover &__img {

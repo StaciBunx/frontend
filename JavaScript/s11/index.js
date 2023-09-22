@@ -33,12 +33,16 @@ async function fetchData() {
     });
 
     const btns = document.querySelectorAll(".btn__del");
+
     btns.forEach((el) => {
       el.addEventListener("click", () => {
         const product = el.closest(".product");
         product.remove();
       });
     });
+
+
+
   } catch (error) {
     console.error(error);
   }

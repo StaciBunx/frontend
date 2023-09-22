@@ -76,6 +76,7 @@
         position: absolute;
         right: 22px;
         top: 28px;
+        cursor: pointer;
 
         &:hover path {
             fill: $select-color;

@@ -663,6 +663,7 @@ summary::-webkit-details-marker {
   position: absolute;
   right: 22px;
   top: 28px;
+  cursor: pointer;
 }
 .cart__close:hover path {
   fill: #F16D7F;
@@ -1217,6 +1218,13 @@ ul {
   list-style-type: none;
 }
 
+.cart__contatiner {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .center {
   max-width: 1140px;
   margin: 0 auto;
@@ -1310,7 +1318,7 @@ ul {
 .basket {
   position: relative;
 }
-.basket::after {
+.basket_num {
   display: grid;
   align-content: center;
   justify-content: center;
@@ -1464,6 +1472,7 @@ ul {
   justify-content: center;
   gap: 11px;
   color: white;
+  cursor: pointer;
 }
 .featured__item:hover .featured__img {
   filter: brightness(0.5);
