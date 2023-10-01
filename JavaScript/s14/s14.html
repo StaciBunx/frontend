@@ -127,17 +127,11 @@
         // console.log(sumDigits(456789)); // Ожидаемый результат: 39 (4 + 5 + 6
         // + 7 + 8 + 9)
 
-
-        const digits = [];
         function sumDigits(num) {
-            if (Number(num) === 0) return digits;
-            let digit = num % 10;
-            digits.push(digit);
-            sumDigits(Math.floor(num / 10));
-
-
+            num = `${num}`;
+            if (num.length === 1) return +num;
+            return +num[0] + sumDigits(num.slice(1));
         }
-
         console.log(sumDigits(123));
         console.log(sumDigits(456789))
     </script>
