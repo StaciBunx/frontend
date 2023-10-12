@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar 16</title>
+</head>
+
+<body>
+
+    <script>
+        // 1.Напишите функцию getPrototypeChain(obj), которая будет
+        // возвращать цепочку прототипов для заданного объекта
+        // obj. Функция должна вернуть массив прототипов, начиная
+        // от самого объекта и заканчивая глобальным объектом
+        // Object.prototype.
+
+        function getPrototypeChain(obj) {
+            const result = [];
+            let currentObj = obj;
+
+            while (currentObj !== null) {
+                result.push(currentObj);
+                currentObj = Object.getPrototypeOf(currentObj);
+            }
+            return result;
+        }
+
+        const MusicSeries = {
+            model: 'music series',
+            power: 200,
+            batterySize: 2100,
+            boxSize: 0.5,
+            workTime: 45,
+            startWipe() {
+                console.log('I am the method of MusicSeries');
+                console.log('I am starting to wipe the floor...');
+            }
+        };
+
+        const Blues = {
+            model: 'Blues-1',
+            power: 250,
+            batterySize: 2500,
+            workTime: 50,
+        };
+
+        Object.setPrototypeOf(Blues, MusicSeries);
+        const prototypeChain = getPrototypeChain(Blues);
+        console.log(prototypeChain);
+
+        // 2. Создайте класс Animal, который будет представлять животное. У
+        // класса Animal должны быть следующие свойства и методы:
+        // ● Свойство name (строка) - имя животного.
+        // ● Метод speak() - выводит в консоль звук, издаваемый животным.
+        // Создайте подкласс Dog, который наследует класс Animal. Для
+        // подкласса Dog добавьте дополнительное свойство и метод:
+        // ● Свойство breed (строка) - порода собаки.
+        // ● Метод fetch() - выводит в консоль сообщение "Собака [name]
+        // принесла мяч.".
+
+        class Animal {
+
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} издает звук`);
+            }
+        }
+
+
+        class Dog extends Animal {
+
+            constructor(name, breed) {
+                super(name);
+                this.breed = breed;
+            }
+            fetch() {
+                console.log(`Собака ${this.name} принесла мяч.`);
+            }
+        }
+
+        const animal1 = new Animal('Животное');
+        animal1.speak();
+
+        const dog1 = new Dog('Бобик', 'Дворняжка');
+        console.log(dog1.breed);
+        dog1.speak();
+
+        //3. Имитация работы корзины интернет-магазина
+
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+        };
+
+        class ShoppingCart {
+
+            constructor(customerName, initialTotalCost = 0) {
+                this.customerName = customerName;
+                this.TotalCost = initialTotalCost;
+            }
+
+            addItem(product, quantity = 1) {
+                this.TotalCost += (product.price * quantity);
+            };
+
+            getCurrentTotalCost() {
+                return this.TotalCost;
+            }
+
+            checkout() {
+                console.log(`Заказ оформлен для ${this.customerName}. Общая стоимость заказа: ${this.getCurrentTotalCost()} рублей. Спасибо за покупку!`);
+            }
+        }
+
+        const product1 = new Product('футболка', 1500);
+        const product2 = new Product('джинсы', 1000);
+
+        const cart = new ShoppingCart('Александр');
+        cart.addItem(product1);
+        cart.addItem(product2);
+        console.log(cart.getCurrentTotalCost());
+        cart.checkout();
+
+    </script>
+</body>
+
+</html>
