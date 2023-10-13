@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar 17</title>
+</head>
+
+<body>
+    <div class="userlist"></div>
+    <script>
+        // // 1. Создайте функцию delayedMessage(message, delay),
+        // // которая принимает аргументы message (строка) и delay
+        // // (число). Функция должна выводить заданное сообщение в
+        // // консоль через указанную задержку.
+        // // 2. Вызовите функцию delayedMessage() три раза с разными
+        // // сообщениями и задержками. Например:
+        // // a. delayedMessage("Сообщение 1", 2000)
+        // // b. delayedMessage("Сообщение 2", 1000)
+        // // c. delayedMessage("Сообщение 3", 3000)
+        // // 3. После вызова всех функций delayedMessage(), добавьте
+        // // сообщение вида "Конец программы" с помощью
+        // // console.log().
+
+        // function delayedMessage(message, delay) {
+        //     setTimeout(() => console.log(message), delay);
+        // }
+
+        // delayedMessage("Сообщение 1", 2000)
+        // delayedMessage("Сообщение 2", 1000)
+        // delayedMessage("Сообщение 3", 3000)
+
+        // console.log("Конец программы");
+
+        // // 2.
+
+        // function delayedTasks(tasks) {
+        //     tasks.forEach(element => {
+        //         setTimeout(() => console.log(element.name), element.time);
+        //     });
+        // };
+
+        // const tasks = [
+        //     { name: 'task1', time: 1000 },
+        //     { name: 'task2', time: 2000 },
+        //     { name: 'task3', time: 3000 },
+        //     { name: 'task4', time: 4000 },
+        //     { name: 'task5', time: 5000 }
+        // ]
+        // delayedTasks(tasks);
+
+        // // 3. Напишите программу, которая загружает данные с сервера с
+        // // использованием объекта XMLHttpRequest и отображает полученную
+        // // информацию в консоли.
+        // // 1. Создайте функцию loadData(url), которая принимает аргумент url
+        // // (строка) - адрес сервера для загрузки данных.
+        // // 2. Внутри функции loadData() создайте объект XMLHttpRequest с
+        // // помощью new XMLHttpRequest().
+        // // 3. Зарегистрируйте обработчик события onreadystatechange, который
+        // // будет вызываться при изменении состояния запроса. Проверьте,
+        // // если readyState равен 4 (успешно выполнен запрос) и status равен
+        // // 200 (успешный статус ответа сервера), то выведите полученные
+        // // данные в консоль с помощью console.log(xhr.responseText).
+        // // 4. Откройте запрос с помощью xhr.open("GET", url, true), где "GET" - тип
+        // // запроса, url - адрес сервера, true - асинхронный режим запроса.
+        // // 5. Отправьте запрос на сервер с помощью xhr.send().
+
+        // function loadData(url) {
+        //     const xhr = new XMLHttpRequest();
+        //     xhr.onreadystatechange = function () {
+        //         if (xhr.status !== 200) {
+        //             console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+        //         } else {
+        //             console.log(`user: ${xhr.responseText}`);
+        //         }
+        //     };
+        //     xhr.open('GET', url, true);
+        //     xhr.send();
+        // };
+
+        // loadData('https://jsonplaceholder.typicode.com/users');
+
+        // 4. Переписать задание выше на fetch
+
+        // const fetchData = async (url) => {
+        //     const response = await fetch(url);
+        //     if (response.ok) {
+        //         console.log('OK');
+        //         const data = await response.json();
+        //         console.log(data);
+        //         return data;
+        //     } else {
+        //         console.log(response.status);
+        //     }
+        // }
+
+        // fetchData('https://jsonplaceholder.typicode.com/users');
+
+        //5. Вывести данные с сервера на страницу
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response) => response.json())
+            .then((data) => listUser(data));
+
+        const userListShow = document.querySelector('.userlist');
+
+        function listUser(elem) {
+            userArr = [];
+            for (let i = 0; i < elem.length; i++) {
+                userArr.push(elem[i].name);
+                userListShow.innerHTML += elem[i].name + `<br>`;
+            };
+
+            userArr = userArr.sort();
+
+
+            for (let i = 0; i < userArr.length; i++) {
+                userListShow.innerHTML += 'sorted ' + elem[i].name + `<br>`;
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
