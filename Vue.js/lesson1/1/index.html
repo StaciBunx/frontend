@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
+    <div id="app">
+        <p v-show="text">{{text}}</p>
+        <button @click="reverseText">Перевернуть</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                text: 'Нажми кнопку и этот текст перевернется'
+            },
+            methods: {
+                reverseText() {
+                    this.text = this.text.split('').reverse().join('');
+                    return this.text;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

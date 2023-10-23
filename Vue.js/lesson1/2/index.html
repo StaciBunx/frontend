@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <!-- Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+    Дополнительное задание: При клике на элемент списка он должен быть удален. (по желанию)-->
+    <div id="app">
+        <button @click="addElement">Добавить элемент</button>
+        <ul v-for="element in products" @click="removeElement(element)"> {{element}}</ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                products:
+                    ['Элемент списка'
+                    ],
+            },
+            methods: {
+                addElement() {
+                    this.products.push('Новый элемент списка');
+                },
+                removeElement(element) {
+                    const index = this.products.indexOf(element);
+                    this.products.splice(index, 1);
+                }
+
+            },
+        });
+    </script>
+</body>
+
+</html>
