@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+    <style>
+        .buttons {
+            margin-bottom: 15px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .product {
+            display: grid;
+            width: 250px;
+            height: 350px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+
+<body>
+    <div id="app">
+        <div class="buttons"> <button @click="sortUp()">Сортировать по возрастанию</button>
+            <button @click="sortDown()">Сортировать по убыванию</button>
+        </div>
+
+        <div class=" products">
+            <div class="product" v-for="(product,index) in products" :key="product.index">
+                <img :src="product.url" :alt="product.alt">
+                <h3>{{product.name}}</h3>
+                <p>{{product.price}} руб.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                products: [
+                    {
+                        url: 'photo1.jpg',
+                        alt: 'картинка 1',
+                        name: 'Футболка',
+                        price: 200,
+                    },
+                    {
+                        url: 'photo2.jpg',
+                        alt: 'картинка 2',
+                        name: 'Платок',
+                        price: 150,
+                    },
+                    {
+                        url: 'photo3.jpg',
+                        alt: 'картинка 3',
+                        name: 'Шляпа',
+                        price: 600,
+                    },
+                    {
+                        url: 'photo4.jpg',
+                        alt: 'картинка 4',
+                        name: 'Пальто',
+                        price: 800,
+                    },
+                    {
+                        url: 'photo5.jpg',
+                        alt: 'картинка 5',
+                        name: 'Куртка',
+                        price: 1000,
+                    },
+                    {
+                        url: 'photo6.jpg',
+                        alt: 'картинка 6',
+                        name: 'Сумка',
+                        price: 850,
+                    },
+                ]
+            },
+
+            methods: {
+                sortUp() {
+                    this.products.sort((a, b) => a.price > b.price ? 1 : -1);
+                },
+                sortDown() {
+                    this.products.sort((a, b) => a.price > b.price ? -1 : 1);
+
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>
