@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+
+<body>
+    <div id="app">
+        <todolist></todolist>
+    </div>
+    <script>
+
+        Vue.component('todoItem', {
+            props: ['task'],
+            data() {
+                return {
+
+                }
+            },
+            template: `
+             <li>{{task.name}}
+                <button @click="$emit('click', task.id)">Удалить</button>
+            </li>
+            `,
+        });
+
+
+        Vue.component('todolist', {
+            data() {
+                return {
+                    findElement: '',
+                    todoList: [
+                        {
+                            id: 0,
+                            name: 'Чайка '
+                        },
+                        {
+                            id: 1,
+                            name: 'Арбуз '
+                        },
+                        {
+                            id: 2,
+                            name: 'Шоссе '
+                        },
+                    ],
+                    newTask: {
+                        id: null,
+                        name: '',
+                    }
+                }
+            },
+            template: `
+        <div>
+            <div>
+            <label> Поиск:
+            <input type="text" v-model="findElement"></input>
+            </label>
+            </div>
+        <button @click="sortUp">Up</button>
+        <button @click="sortDown">Down</button>
+
+    <ul>
+    <todoItem v-for="(task, index) in filteredToDolist" :key="index" :task="task"></todoItem>
+    </ul>
+    <div>
+            <label>
+            <input v-model="newTask.name" type=text><button @click="addElement">Добавить</button>
+            </label>
+        </div>
+        </div>
+        `,
+            computed: {
+                filteredToDolist() {
+                    return this.findElement ? this.todoList.filter((el) => el.name.includes(this.findElement)) : this.todoList;
+                }
+            },
+            methods: { //надо доделать, не работает
+                deleteElement(idToDelete) {
+                    this.filteredToDolist.forEach((element, index) => {
+                        if (element.id === idToDelete) {
+                            this.filteredToDolist.splice(index, 1);
+
+                        }
+                    });
+                },
+                addElement() {
+                    this.todoList.push({
+                        id: this.todoList.length,
+                        name: this.newTask.name,
+                    });
+                    this.newTask = {
+                        id: null,
+                        name: '',
+                    }
+                },
+                sortUp() {
+                    this.todoList.sort((a, b) => a.name > b.name ? 1 : -1)
+                },
+                sortDown() {
+                    this.todoList.sort((a, b) => a.name > b.name ? -1 : 1)
+                }
+            },
+        });
+
+
+
+        const app = new Vue({
+            el: '#app',
+        });
+    </script>
+
+</body>
+
+</html>
