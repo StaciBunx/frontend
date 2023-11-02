@@ -5,7 +5,7 @@
         <nav class="header__nav">
             <ul class="header__nav_menu">
               <li class="header__nav_menu_item" v-for="(name,index) in pageNames" :key="index">
-                <a class="header__nav_menu_link" href="./index.html" @click="$root.currentPage = name">{{name}}</a>
+                <a class="header__nav_menu_link" href="./index.html" @click="setCurrentPage(name)">{{name}}</a>
               </li>
             </ul>
         </nav>
@@ -20,6 +20,11 @@ export default {
   data () {
     return {
       pageNames: ['Index', 'Project', 'Blog']
+    }
+  },
+  methods: {
+    setCurrentPage (name) {
+      this.$parent.currentPage = name
     }
   }
 }

@@ -2,8 +2,8 @@
   <div id="app">
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
-    <IndexPage v-show="currentPage = ''" />
-    <BlogPage v-show="currentPage = 'Home'" />
+    <IndexPage v-show="currentPage = 'Home'" />
+    <BlogPage v-show="currentPage = 'Blog'" />
     <TheFooter />
   </div>
 </template>
