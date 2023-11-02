@@ -1,21 +1,27 @@
 <template>
   <div id="app">
     <TheHeader />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
   }
 }
 </script>
 
 <style lang="scss">
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500;600&display=swap');
+
 //colors
 $black: #292F36;
 $gray: #4D5053;
@@ -71,7 +77,7 @@ ul {
 .heading {
   font-family: 'DM Serif Display', serif;
   font-style: normal;
-  color: $black;
+  color: black;
   font-weight: 400;
   text-align: center;
   font-size: 50px;
