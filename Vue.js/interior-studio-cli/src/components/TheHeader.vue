@@ -20,6 +20,10 @@ export default {
 </script>
 
 <style lang="scss">
+//styles
+
+@import "../styles/vars";
+
 .header {
   display: flex;
   justify-content: space-between;

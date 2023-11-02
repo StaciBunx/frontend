@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <TheHeader />
+    <h1 class="visually_hidden">Interno portfolio </h1>
+    <IndexPage />
     <TheFooter />
   </div>
 </template>
@@ -8,23 +10,27 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
+import IndexPage from './pages/IndexPage.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    IndexPage
+
   }
 }
 </script>
 
 <style lang="scss">
+//styles
+@import "../src/styles/vars";
+
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500;600&display=swap');
 
 //colors
-$black: #292F36;
-$gray: #4D5053;
 
 //Content-width
 $content-width: 1200px;

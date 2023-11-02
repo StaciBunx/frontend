@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss">
+//styles
+@import "../styles/vars";
+
 .footer {
   display: flex;
   justify-content: space-between;
