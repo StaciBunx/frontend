@@ -28,12 +28,13 @@ export default {
 @import "../styles/vars";
 
 .top {
-  margin-bottom: 97px;
   position: relative;
 
   &__banner {
     background-color: #F4F0EC;
     min-width: 1200px;
+    margin-bottom: 100px;
+
   }
 
   &__intro {
