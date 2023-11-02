@@ -4,9 +4,9 @@
         <a href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></a>
         <nav class="header__nav">
             <ul class="header__nav_menu">
-                <li class="header__nav_menu_item"><a class="header__nav_menu_link" href="./index.html">Home</a></li>
-                <li class="header__nav_menu_item"><a class="header__nav_menu_link" href="#">Project</a></li>
-                <li class="header__nav_menu_item"><a class="header__nav_menu_link" href="./blog.html">Blog</a></li>
+              <li class="header__nav_menu_item" v-for="(name,index) in pageNames" :key="index">
+                <a class="header__nav_menu_link" href="./index.html" @click="$root.currentPage = name">{{name}}</a>
+              </li>
             </ul>
         </nav>
     </header>
@@ -15,7 +15,13 @@
 
 <script>
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  props: ['pagename'],
+  data () {
+    return {
+      pageNames: ['Index', 'Project', 'Blog']
+    }
+  }
 }
 </script>
 

@@ -48,7 +48,7 @@
                 <img :src="item.src" alt="blog image" class="blog__img"
                     style="min-width: 340px; min-height:289px;">
                 <h4 class="blog__tag">{{item.tag}}</h4>
-                <h3 class="blog__heading heading">{{item.heading}}</h3>
+                <h3 class="blog__heading">{{item.heading}}</h3>
                 <div class="blog__content">
                     <time datetime="2022-12-26" class="blog__date">{{item.date}}</time>
                     <a href="#" class="blog__more">
@@ -84,56 +84,55 @@
     </ul>
 </section>
 
-
 </main>
     </div>
 </template>
 <script>
 export default {
-    name: 'BlogPage.vue',
-    data () {
-        return {
-            articles: [
-                {
-                    src: "./images/index/blog-1.jpg",
-                    tag: "Kitchen Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "26 December, 2022",
-                },
-                {
-                    src: "./images/index/blog-2.jpg",
-                    tag: "Living Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "22 December, 2022",
-                },
-                {
-                    src: "./images/index/blog-3.jpg",
-                    tag: "Interior Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "25 December, 2022",
-                },
-                {
-                    src: "./images/index/blog-1.jpg",
-                    tag: "Kitchen Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "26 December, 2022",
-                },
-                {
-                    src: "./images/index/blog-2.jpg",
-                    tag: "Living Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "22 December, 2022",
-                },
-                {
-                    src: "./images/index/blog-3.jpg",
-                    tag: "Interior Design",
-                    heading: "Let’s Get Solution For Building Construction Work",
-                    date: "25 December, 2022",
-                },
-            ]
-
+  name: 'BlogPage.vue',
+  data () {
+    return {
+      articles: [
+        {
+          src: require('../assets/blog/blog-1.jpg'),
+          tag: 'Kitchen Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '26 December, 2022'
+        },
+        {
+          src: require('../assets/blog/blog-2.jpg'),
+          tag: 'Living Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '22 December, 2022'
+        },
+        {
+          src: require('../assets/blog/blog-3.jpg'),
+          tag: 'Interior Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '25 December, 2022'
+        },
+        {
+          src: require('../assets/blog/blog-1.jpg'),
+          tag: 'Kitchen Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '26 December, 2022'
+        },
+        {
+          src: require('../assets/blog/blog-2.jpg'),
+          tag: 'Living Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '22 December, 2022'
+        },
+        {
+          src: require('../assets/blog/blog-3.jpg'),
+          tag: 'Interior Design',
+          heading: 'Let’s Get Solution For Building Construction Work',
+          date: '25 December, 2022'
         }
+      ]
+
     }
+  }
 
 }
 </script>
@@ -241,7 +240,6 @@ export default {
             letter-spacing: 0.16px;
             text-transform: capitalize;
         }
-
 
     }
 

@@ -2,7 +2,8 @@
   <div id="app">
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
-    <IndexPage />
+    <IndexPage v-show="currentPage = ''" />
+    <BlogPage v-show="currentPage = 'Home'" />
     <TheFooter />
   </div>
 </template>
@@ -11,14 +12,34 @@
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import IndexPage from './pages/IndexPage.vue'
+import BlogPage from './pages/BlogPage.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheFooter,
-    IndexPage
-
+    IndexPage,
+    BlogPage
+  },
+  data () {
+    return {
+      currentPage: 'Home',
+      pages: [
+        {
+          name: 'Home',
+          isClicked: true
+        },
+        {
+          name: 'Project',
+          isClicked: false
+        },
+        {
+          name: 'Blog',
+          isClicked: false
+        }
+      ]
+    }
   }
 }
 </script>
