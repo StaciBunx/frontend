@@ -2,8 +2,9 @@
   <div id="app">
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
-    <IndexPage v-show="currentPage = 'Home'" />
-    <BlogPage v-show="currentPage = 'Blog'" />
+    <IndexPage />
+    <!-- <BlogPage v-show="currentPage = 'Blog'" /> -->
+    <!-- <ArticlesPage /> -->
     <TheFooter />
   </div>
 </template>
@@ -12,15 +13,18 @@
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import IndexPage from './pages/IndexPage.vue'
-import BlogPage from './pages/BlogPage.vue'
+
+// import ArticlesPage from './pages/ArticlesPage.vue'
+// import BlogPage from './pages/BlogPage.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheFooter,
-    IndexPage,
-    BlogPage
+    IndexPage
+    // BlogPage
+    // ArticlesPage
   },
   data () {
     return {
@@ -49,12 +53,7 @@ export default {
 @import "../src/styles/vars";
 
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500;600&display=swap');
-
-//colors
-
-//Content-width
-$content-width: 1200px;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 * {
   margin: 0;
