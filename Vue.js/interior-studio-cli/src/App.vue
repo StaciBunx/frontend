@@ -2,9 +2,9 @@
   <div id="app">
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
-    <IndexPage />
+    <!-- <IndexPage /> -->
     <!-- <BlogPage v-show="currentPage = 'Blog'" /> -->
-    <!-- <ArticlesPage /> -->
+    <ArticlesPage />
     <TheFooter />
   </div>
 </template>
@@ -12,9 +12,10 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import IndexPage from './pages/IndexPage.vue'
 
-// import ArticlesPage from './pages/ArticlesPage.vue'
+// import IndexPage from './pages/IndexPage.vue'
+
+import ArticlesPage from './pages/ArticlesPage.vue'
 // import BlogPage from './pages/BlogPage.vue'
 
 export default {
@@ -22,9 +23,9 @@ export default {
   components: {
     TheHeader,
     TheFooter,
-    IndexPage
+    // IndexPage
     // BlogPage
-    // ArticlesPage
+    ArticlesPage
   },
   data () {
     return {

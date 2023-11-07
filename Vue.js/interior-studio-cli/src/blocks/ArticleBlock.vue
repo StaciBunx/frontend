@@ -1,6 +1,6 @@
 <template>
   <div>
-    <article class="article">
+    <article class="article" v-for="(article, index) in articles" :key="index">
       <h2 class="article__heading">{{ article.heading }}</h2>
       <img :src="article.imgBig" alt=" article image big" class="article__img article__img_big"
         style="min-width: 799px; min-height:539px;">
@@ -49,7 +49,7 @@
 <script>
 export default {
   name: 'ArticleBlock',
-  props: ['article']
+  props: ['articles']
 }
 </script>
 
