@@ -1,65 +1,76 @@
-<template lang="">
+<template>
   <div>
     <section class="projects__top">
-    <img src="../assets/projects/projects-top-banner.jpg" alt="project top-banner" style="min-height:356px">
-    <div class="projects__top_content">
+      <img src="../assets/projects/projects-top-banner.jpg" alt="project top-banner" style="min-height:356px">
+      <div class="projects__top_content">
         <h1 class="heading">Our Projects</h1>
         <p class="text">Home / Projecrs</p>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="projects center">
-  <div class="projects__list_content">
-    <ul class="projects__list">
-        <li class=projects__item v-for="(category,index) in categories" :key="index">{{category}}</li>
-    </ul>
-</div>
+    <section class="projects center">
+      <div class="projects__list_content">
+        <ul class="projects__list">
+          <li class=projects__item v-for="(category, index) in      categories     " :key="index"
+            @click="setCategory(category.name), changeCategoryStatus(category)"
+            :class="{ projects__item_active: category.isActive, projects__item_disabled: !category.isActive }">
+            {{ category.name }}
+          </li>
+        </ul>
+      </div>
 
-<div class="projects__gallery">
-<div class="projects__box" v-for="project in projects" :key="project.id">
-  <img :src="project.img" alt="project image" class="projects__img">
-  <div class="projects__desc">
-    <div class="projects__content">
-      <h3 class="projects__heading">{{project.heading}}</h3>
-      <p class="projects__subheading">{{project.subheading}}</p>
-    </div>
-<a href="#"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
-<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a>
+      <div class=" projects__gallery">
+        <ProjectBlock v-for="project in projectsFilteredByCategories" :key="project.id" :project="project"
+          class="projects__box" />
+      </div>
 
-  </div>
-
-</div>
-</div>
-
-    <ul class="projects__pages_list">
+      <ul class="projects__pages_list">
         <li class="projects__pages_item"><a href="#" class="projects__pages_link">
-                01
-            </a></li>
+            01
+          </a></li>
         <li class="projects__pages_item"><a href="#" class="projects__pages_link">
-                02
-            </a></li>
+            02
+          </a></li>
         <li class="projects__pages_item"><a href="#" class="projects__pages_link">
-                03
-            </a></li>
+            03
+          </a></li>
         <li class="projects__pages_item"><a href="#" class="projects__pages_link">
-                <svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+            <svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
 
-            </a></li>
-    </ul>
+          </a></li>
+      </ul>
     </section>
   </div>
 </template>
 <script>
+import ProjectBlock from '@/blocks/ProjectBlock.vue'
+
 export default {
   name: 'ProjectsPage',
+  components: { ProjectBlock },
   data () {
     return {
-      categories: ['Bathroom', 'Bed Room', 'Kitchen', 'Living Area'],
+      categories: [{
+        name: 'Bathroom',
+        isActive: false
+      },
+      {
+        name: 'Bedroom',
+        isActive: false
+      },
+      {
+        name: 'Kitchen',
+        isActive: false
+      },
+      {
+        name: 'Living Area',
+        isActive: false
+      }
+      ],
+      currentCategory: '',
       projects: [
         {
           id: 1,
@@ -72,21 +83,21 @@ export default {
           id: 2,
           heading: 'Classic Minimal Bedroom',
           subheading: 'Decor / Artchitecture',
-          category: 'Bedroom',
+          category: 'Bathroom',
           img: require('../assets/projects/project-2.jpg')
         },
         {
           id: 3,
           heading: 'Classic Minimal Bedroom',
           subheading: 'Decor / Artchitecture',
-          category: 'Bedroom',
+          category: 'Kitchen',
           img: require('../assets/projects/project-3.jpg')
         },
         {
           id: 4,
           heading: 'Classic Minimal Bedroom',
           subheading: 'Decor / Artchitecture',
-          category: 'Bedroom',
+          category: 'Living Area',
           img: require('../assets/projects/project-4.jpg')
         },
         {
@@ -100,10 +111,37 @@ export default {
           id: 6,
           heading: 'Classic Minimal Bedroom',
           subheading: 'Decor / Artchitecture',
-          category: 'Bedroom',
+          category: 'Bathroom',
           img: require('../assets/projects/project-6.jpg')
         }
       ]
+    }
+  },
+  methods: {
+    setCategory (category) {
+      this.currentCategory = category
+    },
+    changeCategoryStatus (category) {
+      this.categories.forEach(element => {
+        element.isActive = false
+        if (element.name === category.name) {
+          element.isActive = !element.isActive
+        }
+      })
+    }
+  },
+  computed: {
+    projectsFilteredByCategories () {
+      const filteredProjects = []
+      if (!this.currentCategory) {
+        return this.projects
+      }
+      this.projects.forEach(project => {
+        if (this.currentCategory === project.category) {
+          filteredProjects.push(project)
+        }
+      })
+      return filteredProjects
     }
   }
 
@@ -158,9 +196,19 @@ export default {
     cursor: pointer;
     height: 75px;
     width: 219px;
-    border-radius: 18px;
+    border-radius: 16px;
     justify-content: center;
     align-items: center;
+
+    &_active {
+      background-color: #CDA274;
+      color: white;
+    }
+
+    &_disabled {
+      background-color: none;
+      color: black;
+    }
   }
 
   &__item:hover {
