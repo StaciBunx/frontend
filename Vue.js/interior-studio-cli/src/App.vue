@@ -6,7 +6,7 @@
     <!-- <BlogPage  /> -->
     <!-- <ArticlesPage /> -->
 
-    <ProjectsPage />
+    <ProjectDetailsPage />
     <TheFooter />
   </div>
 </template>
@@ -14,7 +14,8 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import ProjectsPage from './pages/ProjectsPage.vue'
+import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
+// import ProjectsPage from './pages/ProjectsPage.vue'
 // import IndexPage from './pages/IndexPage.vue'
 // import ArticlesPage from './pages/ArticlesPage.vue'
 // import BlogPage from './pages/BlogPage.vue'
@@ -27,7 +28,8 @@ export default {
     // IndexPage
     // BlogPage
     // ArticlesPage,
-    ProjectsPage
+    // ProjectsPage,
+    ProjectDetailsPage
   },
   data () {
     return {
@@ -47,6 +49,9 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    console.log(this.$store)
   }
 }
 </script>
