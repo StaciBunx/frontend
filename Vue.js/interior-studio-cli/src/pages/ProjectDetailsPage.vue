@@ -16,15 +16,11 @@
   </div>
 
 <div class="slider center">
-  <img src="../assets/details/slider-img.jpg" alt="big image" class="slider__image">
+  <img :src="require('../assets/details/slider-img-' + currentImgSlider)" alt="big image" class="slider__image">
 <div class="slider__switch">
+  <div class="slider__item" v-for="item in items" :key="item.id">
+  </div>
 
-  <div class="slider__item">
-  </div>
-  <div class="slider__item">
-  </div>
-  <div class="slider__item">
-  </div>
 </div>
 </div>
 </section>
@@ -32,9 +28,24 @@
 </template>
 
 <script>
-export default {
-  name: 'ProjectDetailsPage'
+import { mapActions, mapGetters } from 'vuex'
 
+export default {
+  name: 'ProjectDetailsPage',
+  data () {
+    return {
+      currentImgSlider: '1.jpg'
+    }
+  },
+  created () {
+    this.fetchData()
+  },
+  methods: {
+    ...mapActions(['fetchData'])
+  },
+  computed: {
+    ...mapGetters(['items'])
+  }
 }
 </script>
 <style lang="scss">
