@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+
     data: [
     ]
     // начальное состояние (примитивные свойства: числа, массивы, объекты)
@@ -14,6 +15,7 @@ export default new Vuex.Store({
     SET_DATA_STATE (state, data) {
       state.data = data
     }
+
   },
   actions: {
     // методы для асинхронных операций, тригер действий: получить данные,

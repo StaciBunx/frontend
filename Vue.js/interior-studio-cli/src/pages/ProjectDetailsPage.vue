@@ -18,7 +18,7 @@
 <div class="slider center">
   <img :src="require('../assets/details/slider-img-' + currentImgSlider)" alt="big image" class="slider__image">
 <div class="slider__switch">
-  <div class="slider__item" v-for="item in items" :key="item.id">
+  <div class="slider__item" v-for="item in items" :key="item.id" @click="currentImgSlider=item.src">
   </div>
 
 </div>
