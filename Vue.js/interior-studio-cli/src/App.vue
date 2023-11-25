@@ -3,10 +3,6 @@
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
     <router-view></router-view>
-    <!-- <IndexPage /> -->
-    <!-- <BlogPage  /> -->
-    <!-- <ArticlesPage /> -->
-    <!-- <ProjectDetailsPage /> -->
     <TheFooter />
   </div>
 </template>
@@ -14,38 +10,12 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-// import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
-// import ArticlesPage from './pages/ArticlesPage.vue'
-// import BlogPage from './pages/BlogPage.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheFooter
-    // BlogPage
-    // ArticlesPage,
-    // ProjectsPage,
-    // ProjectDetailsPage
-  },
-  data () {
-    return {
-      currentPage: 'Home',
-      pages: [
-        {
-          name: 'Home',
-          isClicked: true
-        },
-        {
-          name: 'Project',
-          isClicked: false
-        },
-        {
-          name: 'Blog',
-          isClicked: false
-        }
-      ]
-    }
   },
   mounted () {
     console.log(this.$store)
