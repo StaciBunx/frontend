@@ -7,8 +7,18 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'index',
     component: IndexPage
+  },
+  {
+    path: '/project',
+    name: 'project',
+    component: () => import('../src/pages/ProjectsPage.vue')
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: () => import('../src/pages/BlogPage.vue')
   }
 ]
 

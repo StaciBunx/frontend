@@ -14,10 +14,7 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-// import IndexPage from './pages/IndexPage.vue'
-
 // import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
-// import ProjectsPage from './pages/ProjectsPage.vue'
 // import ArticlesPage from './pages/ArticlesPage.vue'
 // import BlogPage from './pages/BlogPage.vue'
 
@@ -26,7 +23,6 @@ export default {
   components: {
     TheHeader,
     TheFooter
-    // IndexPage
     // BlogPage
     // ArticlesPage,
     // ProjectsPage,

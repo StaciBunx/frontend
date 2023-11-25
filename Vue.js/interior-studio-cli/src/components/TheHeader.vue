@@ -1,14 +1,14 @@
 <template lang="">
   <div>
     <header class="header center">
-        <a href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></a>
+        <router-link to="/" href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></router-link>
         <nav class="header__nav">
-            <ul class="header__nav_menu">
-              <li class="header__nav_menu_item" v-for="(name,index) in pageNames" :key="index">
-                <a class="header__nav_menu_link" href="./index.html" @click="setCurrentPage(name)">{{name}}</a>
-              </li>
-<router-link to="/">Hahaha</router-link>
-            </ul>
+
+            <div class="header__nav_menu">
+                <router-link  to="/" class="header__nav_menu_link">Index</router-link>
+                <router-link  to="/project" class="header__nav_menu_link">Project</router-link>
+                <router-link  to="/blog" class="header__nav_menu_link">Blog</router-link>
+            </div>
         </nav>
     </header>
   </div>
@@ -16,18 +16,7 @@
 
 <script>
 export default {
-  name: 'TheHeader',
-  props: ['pagename'],
-  data () {
-    return {
-      pageNames: ['Index', 'Project', 'Blog']
-    }
-  },
-  methods: {
-    setCurrentPage (name) {
-      this.$parent.currentPage = name
-    }
-  }
+  name: 'TheHeader'
 }
 </script>
 
