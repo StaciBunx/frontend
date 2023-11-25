@@ -29,6 +29,15 @@ const routes = [
     path: '/articles',
     name: 'articles',
     component: () => import('../src/pages/ArticlesPage.vue')
+  },
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: () => import('../src/pages/Error404Page.vue')
+  },
+  {
+    path: '*',
+    redirect: '/404'
   }
 ]
 
