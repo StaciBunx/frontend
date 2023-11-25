@@ -17,14 +17,14 @@
                     <h3 class="blog__heading">Let’s Get Solution For Building Construction Work</h3>
                     <div class="blog__content">
                         <time datetime="2022-12-26" class="blog__date">26 December, 2022</time>
-                        <a href="#" class="blog__more">
+                        <router-link to="/articles" class="blog__more">
                             <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                 <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </router-link>
                     </div>
 
                 </div>
@@ -36,14 +36,14 @@
                     <h3 class="blog__heading">Let’s Get Solution For Building Construction Work</h3>
                     <div class="blog__content">
                         <time datetime="2022-12-26" class="blog__date">22 December, 2022</time>
-                        <a href="#" class="blog__more">
+                        <router-link to="/articles" class="blog__more">
                             <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                 <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </router-link>
                     </div>
 
                 </div>
@@ -55,14 +55,14 @@
                     <h3 class="blog__heading">Let’s Get Solution For Building Construction Work</h3>
                     <div class="blog__content">
                         <time datetime="2022-12-26" class="blog__date">25 December, 2022</time>
-                        <a href="#" class="blog__more">
+                        <router-link to="/articles" class="blog__more">
                             <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                 <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </router-link>
                     </div>
 
                 </div>
