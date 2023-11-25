@@ -7,6 +7,7 @@
               <li class="header__nav_menu_item" v-for="(name,index) in pageNames" :key="index">
                 <a class="header__nav_menu_link" href="./index.html" @click="setCurrentPage(name)">{{name}}</a>
               </li>
+<router-link to="/">Hahaha</router-link>
             </ul>
         </nav>
     </header>

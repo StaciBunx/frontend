@@ -2,11 +2,11 @@
   <div id="app">
     <TheHeader />
     <h1 class="visually_hidden">Interno portfolio </h1>
+    <router-view></router-view>
     <!-- <IndexPage /> -->
     <!-- <BlogPage  /> -->
     <!-- <ArticlesPage /> -->
-
-    <ProjectDetailsPage />
+    <!-- <ProjectDetailsPage /> -->
     <TheFooter />
   </div>
 </template>
@@ -14,9 +14,10 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
-// import ProjectsPage from './pages/ProjectsPage.vue'
 // import IndexPage from './pages/IndexPage.vue'
+
+// import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
+// import ProjectsPage from './pages/ProjectsPage.vue'
 // import ArticlesPage from './pages/ArticlesPage.vue'
 // import BlogPage from './pages/BlogPage.vue'
 
@@ -24,12 +25,12 @@ export default {
   name: 'App',
   components: {
     TheHeader,
-    TheFooter,
+    TheFooter
     // IndexPage
     // BlogPage
     // ArticlesPage,
     // ProjectsPage,
-    ProjectDetailsPage
+    // ProjectDetailsPage
   },
   data () {
     return {
