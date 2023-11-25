@@ -5,7 +5,7 @@
         <nav class="header__nav">
 
             <div class="header__nav_menu">
-                <router-link  to="/" class="header__nav_menu_link">Index</router-link>
+                <router-link  to="/" class="header__nav_menu_link">Home</router-link>
                 <router-link  to="/project" class="header__nav_menu_link">Project</router-link>
                 <router-link  to="/blog" class="header__nav_menu_link">Blog</router-link>
             </div>
