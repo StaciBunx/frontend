@@ -2,8 +2,7 @@
   <div>
     <footer class="footer center">
         <div class="footer__left">
-            <a class="footer__logo" href="index.html">
-                <img src="../assets/index/Logo.svg" alt="logotype" class="logo"></a>
+          <router-link to="/" href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></router-link>
             <p class="footer__text text">It is a long established fact that a reader will be distracted lookings.</p>
             <div class="footer__social"><svg width="19" height="16" viewBox="0 0 19 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -21,11 +20,11 @@
         <div class="footer__right">
             <div class="footer__pages">
                 <h4 class="footer__subheading">Pages</h4>
-                <ul class="footer__list">
-                    <li class="footer_item"><a class="text" href="index.html">Home</a></li>
-                    <li class="footer_item"><a class="text" href="#">Project</a></li>
-                    <li class="footer_item"><a class="text" href="#">Blog</a></li>
-                </ul>
+                <div class="footer__list">
+                  <router-link  to="/" class="text">Home</router-link>
+                <router-link  to="/project" class="text">Project</router-link>
+                <router-link  to="/blog" class="text">Blog</router-link>
+                </div>
             </div>
             <div class="footer__contact">
                 <h4 class="footer__subheading">Contact</h4>
@@ -47,7 +46,6 @@
                 </ul>
             </div>
         </div>
-
     </footer>
   </div>
 </template>
