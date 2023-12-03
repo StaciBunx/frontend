@@ -47,8 +47,17 @@ class Manager {
     this.orderMap.set(client, order)
   };
 
-  getOrders () {
+  getAllOrders () {
     return this.orderMap;
+  }
+
+  getOrderByClientName (name) {
+    const allOrders = this.getAllOrders();
+    for (const order of allOrders) {
+      if (name === order[0].firstname) {
+        return order;
+      }
+    }
   }
 
   getCookforOrder (orderType) {
@@ -61,16 +70,23 @@ class Manager {
   }
 
   printAllOrders () {
-    let allOrders = this.getOrders();
+    const allOrders = this.getAllOrders();
     for (const order of allOrders) {
       console.log(`Клиент ${order[0].firstname} заказал:`);
       order[1].forEach(item => {
         let currentCook = this.getCookforOrder(item.type);
-
         console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${currentCook}`);
       });
-
     }
+  }
+
+  printOrderByClientName (name) {
+    const order = this.getOrderByClientName(name);
+    console.log(`Клиент ${order[0].firstname} заказал:`);
+    order[1].forEach(item => {
+      let currentCook = this.getCookforOrder(item.type);
+      console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${currentCook}`);
+    });
   }
 }
 
@@ -104,17 +120,24 @@ manager.newOrder(
 // Суши "Филадельфия" - 5; готовит повар Андрей
 // Суши "Калифорния" - 3; готовит повар Андрей
 
-manager.printAllOrders();
-// manager.newOrder(
-//   clientPavel,
-//   { name: "Калифорния", quantity: 1, type: "Суши" },
-//   { name: "Тирамису", quantity: 2, type: "Десерт" },
-// );
+
+manager.printOrderByClientName('Павел');
+
+
+manager.newOrder(
+  clientPavel,
+  { name: "Калифорния", quantity: 1, type: "Суши" },
+  { name: "Тирамису", quantity: 2, type: "Десерт" },
+);
 // // Вывод:
 // // Клиент Павел заказал:
 // // Суши "Филадельфия" - 5; готовит повар Андрей
 // // Суши "Калифорния" - 4; готовит повар Андрей
 // // Десерт "Тирамису" - 2; готовит повар Анна
+
+console.log('+++++++++++++++++');
+manager.printOrderByClientName('Павел');
+
 
 // manager.newOrder(
 //   clientPavel,
