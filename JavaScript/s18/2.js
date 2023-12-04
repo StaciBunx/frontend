@@ -66,7 +66,6 @@ class Manager {
       this.clientsSet.add(client);
     }
     else {
-      console.log('Такой клиент уже есть');
       let updatedOrder = this.addToOrder(client, ...orders);
       this.orderMap.set(client, updatedOrder);
     }
@@ -76,7 +75,6 @@ class Manager {
     const searchOrder = this.getOrderByClientName(client.firstname);
     const orderedFood = searchOrder[1];
     const updatedOrder = [...orderedFood, ...newOrders];
-
     for (let i = 0; i < updatedOrder.length; i++) {
       for (let j = i + 1; j < updatedOrder.length; j++) {
         if (updatedOrder[i].name === updatedOrder[j].name) {
@@ -85,7 +83,6 @@ class Manager {
         }
       }
     }
-    console.log(updatedOrder);
     return updatedOrder;
   }
 
@@ -148,7 +145,8 @@ manager.newOrder(
 // Пицца "Пепперони" - 2; готовит повар Олег
 // Десерт "Чизкейк" - 1; готовит повар Анна
 
-// ---
+console.log('+++++++++++++++++');
+manager.printAllOrders();
 
 const clientPavel = new Client("Павел", "Павлов");
 
@@ -162,6 +160,7 @@ manager.newOrder(
 // Суши "Филадельфия" - 5; готовит повар Андрей
 // Суши "Калифорния" - 3; готовит повар Андрей
 
+console.log('+++++++++++++++++');
 manager.printOrderByClientName('Павел');
 
 
@@ -170,11 +169,11 @@ manager.newOrder(
   { name: "Калифорния", quantity: 1, type: "Суши" },
   { name: "Тирамису", quantity: 2, type: "Десерт" },
 );
-// // Вывод:
-// // Клиент Павел заказал:
-// // Суши "Филадельфия" - 5; готовит повар Андрей
-// // Суши "Калифорния" - 4; готовит повар Андрей
-// // Десерт "Тирамису" - 2; готовит повар Анна
+// Вывод:
+// Клиент Павел заказал:
+// Суши "Филадельфия" - 5; готовит повар Андрей
+// Суши "Калифорния" - 4; готовит повар Андрей
+// Десерт "Тирамису" - 2; готовит повар Анна
 
 console.log('+++++++++++++++++');
 manager.printOrderByClientName('Павел');
@@ -185,5 +184,5 @@ manager.printOrderByClientName('Павел');
 //   { name: "Филадельфия", quantity: 1, type: "Суши" },
 //   { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" },
 // );
-// // Ничего не должно быть добавлено, должна быть выброшена ошибка:
-// // Десерт "Трубочка с вареной сгущенкой" - такого блюда не существует.
+// Ничего не должно быть добавлено, должна быть выброшена ошибка:
+// Десерт "Трубочка с вареной сгущенкой" - такого блюда не существует.
