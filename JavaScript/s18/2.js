@@ -41,11 +41,53 @@ class Manager {
     ["Олег", "Пицца"],
     ["Андрей", "Суши"],
     ["Анна", "Десерт"]
-  ])
+  ]);
+  menuMap = new Map([
+    ['Пицца "Маргарита"', "Пицца"],
+    ['Пицца "Пепперони"', "Пицца"],
+    ['Пицца "Три сыра"', "Пицца"],
+    ['Суши "Филадельфия"', "Суши"],
+    ['Суши "Калифорния"', "Суши"],
+    ['Суши "Чизмаки"', "Суши"],
+    ['Суши "Сеякемаки"', "Суши"],
+    ['Десерт "Тирамису"', "Десерт"],
+    ['Десерт "Чизкейк"', "Десерт"]
+  ]);
+  clientsSet = new Set();
 
-  newOrder (client, ...order) {
-    this.orderMap.set(client, order)
+  newOrder (client, ...orders) {
+    for (const order of orders) {
+      if (!this.menuMap.has(`${order.type} "${order.name}"`)) {
+        console.error(`${order.name} - такого блюда не существует`);
+      }
+    };
+    if (!this.clientsSet.has(client)) {
+      this.orderMap.set(client, orders);
+      this.clientsSet.add(client);
+    }
+    else {
+      console.log('Такой клиент уже есть');
+      let updatedOrder = this.addToOrder(client, ...orders);
+      this.orderMap.set(client, updatedOrder);
+    }
   };
+
+  addToOrder (client, ...newOrders) {
+    const searchOrder = this.getOrderByClientName(client.firstname);
+    const orderedFood = searchOrder[1];
+    const updatedOrder = [...orderedFood, ...newOrders];
+
+    for (let i = 0; i < updatedOrder.length; i++) {
+      for (let j = i + 1; j < updatedOrder.length; j++) {
+        if (updatedOrder[i].name === updatedOrder[j].name) {
+          updatedOrder[i].quantity += updatedOrder[j].quantity;
+          updatedOrder.splice(j, 1)
+        }
+      }
+    }
+    console.log(updatedOrder);
+    return updatedOrder;
+  }
 
   getAllOrders () {
     return this.orderMap;
@@ -119,7 +161,6 @@ manager.newOrder(
 // Клиент Павел заказал:
 // Суши "Филадельфия" - 5; готовит повар Андрей
 // Суши "Калифорния" - 3; готовит повар Андрей
-
 
 manager.printOrderByClientName('Павел');
 
