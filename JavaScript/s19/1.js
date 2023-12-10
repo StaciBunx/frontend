@@ -31,6 +31,18 @@ class Library {
         return this.#books;
     }
 
+    static checkDuplicates(books) {
+        try {
+            const booksWithoudDuplicates = [...new Set(books)];
+            if (books.length !== booksWithoudDuplicates.length) {
+                throw new Error('Ошибка! Уберите дубликаты в списке книг!');
+
+            }
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
+
     addBook(title) {
         try {
             if (this.hasBook(title)) {
@@ -57,21 +69,9 @@ class Library {
     }
 
     hasBook(title) {
-        if (this.#books.includes(title)) return true;
-        return false;
+        return this.#books.includes(title);
     }
 
-    checkDuplicates(books) {
-        try {
-            const booksWithoudDuplicates = [...new Set(books)];
-            if (books.length !== booksWithoudDuplicates.length) {
-                throw new Error('Ошибка! Уберите дубликаты в списке книг!');
-
-            }
-        } catch (e) {
-            console.log(e.message);
-        }
-    }
 }
 
 
