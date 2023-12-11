@@ -2,6 +2,7 @@ const reviewKey = 'reviews';
 const allReviews = JSON.parse(localStorage.getItem(reviewKey));
 const container = document.querySelector('.container');
 
+// Получение данных
 function fetchReviews() {
     return new Promise((resolve, reject) => {
         if (allReviews) {
@@ -12,6 +13,7 @@ function fetchReviews() {
     })
 }
 
+// Отрисовка + взаимодействие внутри
 function renderReviews(reviews) {
     reviews.forEach(({ name, text }) => {
         const reviewEl = `
@@ -40,6 +42,7 @@ function renderReviews(reviews) {
 
 };
 
+// Удаление блока с продуктом по клику
 function removeReview(buttons) {
     buttons.forEach(button => {
         button.addEventListener("click", () => {
@@ -58,6 +61,7 @@ function removeReview(buttons) {
     });
 }
 
+// Поиск элемента для дальнейшей работы с ним
 function findElement(element, selector) {
     let sibling = element.nextElementSibling;
     while (sibling) {
@@ -74,6 +78,7 @@ function findElement(element, selector) {
     return null;
 }
 
+// Меняет стили скрыть/показать отзыв
 function toggleReviewButton(button, block) {
     if (block.style.display === 'none') {
         button.textContent = 'Скрыть текст';

@@ -2,15 +2,11 @@
 const reviewKey = 'reviews';
 const reviewValue = [];
 
-
 // Элементы страницы добавления отзывов
 const inputProduct = document.querySelector('.input-product');
 const inputReview = document.querySelector('.input-review');
 const inputButton = document.querySelector('.input-button');
 const error = document.querySelector('.error');
-
-// Элементы страницы просмотра отзывов
-
 
 inputButton.addEventListener('click', function (e) {
     e.preventDefault();
