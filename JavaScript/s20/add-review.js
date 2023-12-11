@@ -2,6 +2,7 @@
 const reviewKey = 'reviews';
 const reviewValue = [];
 
+
 // Элементы страницы добавления отзывов
 const inputProduct = document.querySelector('.input-product');
 const inputReview = document.querySelector('.input-review');

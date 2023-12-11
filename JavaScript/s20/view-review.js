@@ -1,11 +1,11 @@
 const reviewKey = 'reviews';
-const reviewView = JSON.parse(localStorage.getItem(reviewKey));
+const allReviews = JSON.parse(localStorage.getItem(reviewKey));
 const container = document.querySelector('.container');
 
 function fetchReviews() {
     return new Promise((resolve, reject) => {
-        if (reviewView) {
-            resolve(reviewView);
+        if (allReviews) {
+            resolve(allReviews);
         } else {
             reject(new Error('Отзывов нет :('));
         }
@@ -16,10 +16,10 @@ function renderReviews(reviews) {
     reviews.forEach(({ name, text }) => {
         const reviewEl = `
         <div class="review">
-        <h2>${name}</h2>
+        <h2 class="name">${name}</h2>
         <button class="view-button">Показать отзыв</button>
         <div class="review-block" style="display: none">
-        <p>${text}</p>
+        <p class="text">${text}</p>
         <button class="remove-button">Удалить</button>
         </div>
         </div>
@@ -36,14 +36,27 @@ function renderReviews(reviews) {
     });
 
     const buttonsRemove = document.querySelectorAll('.remove-button');
-    buttonsRemove.forEach(button => {
+    removeReview(buttonsRemove);
+
+};
+
+function removeReview(buttons) {
+    buttons.forEach(button => {
         button.addEventListener("click", () => {
             const review = button.closest('.review');
+            const reviewText = review.querySelector('.text').textContent;
+            console.log(review);
+            console.log(reviewText);
+            const index = allReviews.findIndex(item => item.text === reviewText);
+            if (index !== -1) {
+                allReviews.splice(index, 1);
+            }
+            localStorage.setItem(reviewKey, JSON.stringify(allReviews));
+
             review.remove();
         })
     });
-
-};
+}
 
 function findElement(element, selector) {
     let sibling = element.nextElementSibling;
@@ -76,5 +89,3 @@ fetchReviews()
         renderReviews(reviews)
     )
     .catch((error) => console.log(error.message));
-
-console.log(reviewView);
