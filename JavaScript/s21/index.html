@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+</head>
+<style>
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    .table th {
+        font-weight: bold;
+        padding: 5px;
+        background: #efefef;
+        border: 1px solid #dddddd;
+    }
+
+    .table td {
+        border: 1px solid #dddddd;
+        padding: 5px;
+    }
+
+    .table tr td:first-child,
+    .table tr th:first-child {
+        border-left: none;
+    }
+
+    .table tr td:last-child,
+    .table tr th:last-child {
+        border-right: none;
+    }
+
+    .sign_participants {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cancel {
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>Расписание занятий</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Время проведения</th>
+                <th>Максимально чел.</th>
+                <th>Текущее количество</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
