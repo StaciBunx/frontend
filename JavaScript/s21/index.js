@@ -1,16 +1,12 @@
-
-// const lessonsKey = 'lessons';
-// const lessonsData = JSON.parse(localStorage.getItem(lessonsKey));
-// const localdata = JSON.parse(localStorage.getItem(lessonsKey));
-
-function renderTable(localdata) {
-    if (!localdata) {
-        console.error('Ошибка! Данные не загрузились из localStorage');
+function renderTable(jsondata) {
+    let data = getDataFromLocalStorage();
+    if (data.length === 0) {
+        data = jsondata;
     }
-    else {
-        const tbody = document.querySelector('tbody');
-        localdata.forEach(({ id, name, time, maxParticipants, currentParticipants }) => {
-            const tableRow = `
+    setDataForLocalStorage(data);
+    const tbody = document.querySelector('tbody');
+    data.forEach(({ id, name, time, maxParticipants, currentParticipants }) => {
+        const tableRow = `
             <tr>
                 <td>${name}</td>
                 <td>${time}</td>
@@ -22,13 +18,10 @@ function renderTable(localdata) {
                 </td>
             </tr>
     `
-            tbody.insertAdjacentHTML("beforeend", tableRow);
+        tbody.insertAdjacentHTML("beforeend", tableRow);
 
-        });
-        signForLesson();
-        cancelLesson();
-
-    }
+    });
+    signForLesson();
 }
 
 async function fetchData() {
@@ -73,7 +66,6 @@ function signForLesson() {
             const searchLesson = JSON.parse(localStorage.getItem(idKey));
             let currentCountEl = button.closest('.sign_participants').firstElementChild;
             let cancelButton = button.closest('.sign_participants').lastElementChild;
-            console.log(cancelButton);
             if (currentCountEl.textContent < searchLesson.maxParticipants) {
                 searchLesson.currentParticipants++;
                 localStorage.setItem(idKey, JSON.stringify(searchLesson));
@@ -82,33 +74,21 @@ function signForLesson() {
 
             } else {
                 button.disabled = true;
+                cancelButton.style.display = 'block'
+
             }
+            cancelButton.addEventListener("click", () => {
+                button.disabled = false;
+                searchLesson.currentParticipants--;
+                localStorage.setItem(idKey, JSON.stringify(searchLesson));
+                currentCountEl.textContent = searchLesson.currentParticipants;
+
+            })
         })
     });
 }
 
-function cancelLesson() {
-    const buttons = document.querySelectorAll('.cancel');
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const idKey = button.dataset.id;
-            const searchLesson = JSON.parse(localStorage.getItem(idKey));
-            let currentCountEl = button.closest('.sign_participants').firstElementChild;
-            searchLesson.currentParticipants--;
-            localStorage.setItem(idKey, JSON.stringify(searchLesson));
-            currentCountEl.textContent = searchLesson.currentParticipants;
-        })
-    })
-}
-
-function guardMaxParticipantsSignUP(lesson, button) {
-    if (lesson.currentParticipants === lesson.maxParticipants) {
-        button.disabled = false;
-    }
-}
-
 
 fetchData()
-    .then((data) => renderTable(data))
+    .then((jsondata) => renderTable(jsondata))
     .catch((error) => console.log(error.message));
-renderTable(getDataFromLocalStorage());
