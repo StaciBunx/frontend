@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+</head>
+<style>
+    .slider {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+
+    }
+
+    .image {
+        height: 300px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+        gap: 25px;
+    }
+
+    .dots_list {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dot {
+        border: none;
+        border-radius: 50%;
+        font-size: 0;
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        outline: none;
+        background: #a5a19e77;
+        cursor: pointer;
+
+    }
+
+    .normal {}
+
+    .active {
+        background: #45454477;
+    }
+</style>
+
+<body>
+    <div class="slider_container">
+        <div class="slider">
+            <img class="image" src="./img/1.jpeg" alt="current image" data-id="0">
+            <img class="image" src="./img/2.jpeg" alt="current image" data-id="1">
+            <img class="image" src="./img/3.jpeg" alt="current image" data-id="2">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button_prev">Предыдущее изображение</button>
+        <button class="button_next">Следующее изображение</button>
+    </div>
+    <ul class="dots_list">
+        <li class="dot active" data-id="0"></li>
+        <li class="dot" data-id="1"></li>
+        <li class="dot" data-id="2"></li>
+    </ul>
+
+</body>
+
+</html>
