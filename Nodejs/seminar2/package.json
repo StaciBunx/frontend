@@ -1,0 +1,15 @@
+{
+  "name": "passgen-gb",
+  "version": "1.0.0",
+  "description": "Password generator, test of nmp projects",
+  "main": "passwordGenearator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Anastasia B",
+  "license": "ISC",
+  "dependencies": {
+    "passgen-gb": "^1.0.0"
+  }
+}
