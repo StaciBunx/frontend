@@ -55,12 +55,7 @@ app.post('/users', (req, res) => {
         ...req.body,
     });
 
-    fs.writeFile(pathFile, JSON.stringify(users), (err) => {
-        if (err) {
-            console.error(err);
-        }
-    });
-
+    fs.writeFile(pathFile, JSON.stringify(users, null, 2));
 
     res.send({ id: uId });
 });
@@ -84,7 +79,7 @@ app.put('/users/:id', (req, res) => {
         user.lastName = req.body.lastName;
         user.age = req.body.age;
         user.city = req.body.city;
-
+        fs.writeFile(pathFile, JSON.stringify(users, null, 2));
         res.send({ user });
     } else {
         res.status(404);
