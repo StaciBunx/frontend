@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <footer class="footer center">
+    <footer class="footer center content">
         <div class="footer__left">
           <router-link to="/" href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></router-link>
             <p class="footer__text text">It is a long established fact that a reader will be distracted lookings.</p>
@@ -84,7 +84,9 @@ export default {
 
   &__right {
     display: flex;
-    gap: 375px;
+    // gap: 375px;
+    justify-content: space-between;
+
   }
 
   &__pages {

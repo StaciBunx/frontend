@@ -22,11 +22,13 @@
         </section>
   </div>
 </template>
+
 <script>
 export default {
   name: 'IndexCounterBlock'
 }
 </script>
+
 <style lang="scss">
 .counter {
   min-height: 457px;

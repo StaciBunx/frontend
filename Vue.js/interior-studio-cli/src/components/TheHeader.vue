@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <header class="header center">
+    <header class="header center content">
         <router-link to="/" href="index.html"><img src="../assets/index/Logo.svg" alt="logotype" class="logo"></router-link>
         <nav class="header__nav">
 
@@ -21,14 +21,11 @@ export default {
 </script>
 
 <style lang="scss">
-//styles
-
 @import "../styles/vars";
 
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
   padding-top: 53px;
   padding-bottom: 57px;
 
@@ -43,5 +40,9 @@ export default {
       cursor: pointer;
     }
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {}
 }
 </style>

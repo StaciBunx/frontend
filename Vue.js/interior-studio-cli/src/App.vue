@@ -78,7 +78,7 @@ ul {
 .heading {
   font-family: 'DM Serif Display', serif;
   font-style: normal;
-  color: black;
+  color: $black;
   font-weight: 400;
   text-align: center;
   font-size: 50px;
