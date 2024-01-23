@@ -2,7 +2,7 @@
   <div>
     <section class="top center">
             <img src="../assets/index/top-banner.jpg" alt="top banner" class="top__banner"
-                style="max-width: 1200px; min-height:758px;">
+                style="max-width: 1200px; max-height:758px;">
             <div class="top__intro">
                 <h2 class="top__heading heading">Let Your Home Be Unique</h2>
                 <p class="top__text text">There are many variations of the passages of lorem Ipsum fromavailable,
@@ -32,7 +32,7 @@ export default {
 
   &__banner {
     background-color: #F4F0EC;
-    min-width: 1200px;
+    width: 1200px;
     margin-bottom: 100px;
 
   }
@@ -68,6 +68,23 @@ export default {
     gap: 10px;
     border-radius: 18px;
     box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .top {
+
+    &__banner {
+      width: 100%;
+    }
+
+    &__intro {
+      position: absolute;
+      top: 52px;
+      left: 52px;
+      width: 434px;
+    }
   }
 }
 </style>

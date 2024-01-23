@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss">
 .counter {
-  min-height: 457px;
+  height: 457px;
   background-color: #F4F0EC;
   margin-bottom: 100px;
   display: grid;
@@ -55,6 +55,18 @@ export default {
 
   &__item {
     width: 130px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .counter {
+    height: 400px;
+    display: block;
+
+    &__list {
+      justify-content: space-evenly;
+      gap: 0;
+    }
   }
 }
 </style>

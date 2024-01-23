@@ -123,7 +123,7 @@ export default {
     justify-content: space-between;
 
     &_item {
-      width: 525px;
+      min-width: 525px;
       margin-bottom: 50px;
     }
 
@@ -154,5 +154,10 @@ export default {
 
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .projects__gallery {
+      justify-content: center;
+    }
+  }
 }
 </style>
