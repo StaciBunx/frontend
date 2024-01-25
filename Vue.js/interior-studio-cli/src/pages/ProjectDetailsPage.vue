@@ -52,7 +52,7 @@ export default {
 @import "../styles/vars";
 
 .details {
-  padding-top: 200px;
+  padding-top: 80px;
 
   &__content {
     margin: 0 auto 100px;
