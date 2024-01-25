@@ -36,7 +36,7 @@
 
                     <div class="projects__gallery_box">
                         <div class="projects__gallery_content">
-                            <h3 class="projects__gallery_heading">Modern Kitchan</h3>
+                            <h3 class="projects__gallery_heading">Modern Kitchen</h3>
                             <p class="projects__gallery_text text">Decor / Artchitecture</p>
 
                         </div>
