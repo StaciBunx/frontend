@@ -48,7 +48,7 @@ export default {
         {
           tag: 'Bedroom',
           heading: 'Bedroom: Top 25 Design Styles for a Dreamy Bedroom',
-          imgBig: require('../assets/blog/blog-latest-post.jpg'),
+          imgBig: require('../assets/articles/articles-bedroom-big.jpg'),
           imgSmall: require('../assets/articles/articles-small.jpg'),
           date: '26 January, 2022',
           quote: 'Design can help to improve our lives in the present. Design thinking can help us chart a path into the future.',
@@ -57,7 +57,7 @@ export default {
         {
           tag: 'Building',
           heading: 'Building: Types of drawings for building design',
-          imgBig: require('../assets/index/blog-1.jpg'),
+          imgBig: require('../assets/articles/articles-building-big.jpg'),
           imgSmall: require('../assets/articles/articles-small.jpg'),
           date: '2 December, 2022',
           quote: 'Good design is good business.',
@@ -75,7 +75,7 @@ export default {
         {
           tag: 'Kitchen Planning',
           heading: 'Planning: Kitchen Design Ideas & Planning Advice',
-          imgBig: require('../assets/articles/articles-big.jpg'),
+          imgBig: require('../assets/articles/articles-kitchendesign-big.jpg'),
           imgSmall: require('../assets/articles/articles-small.jpg'),
           date: '14 April, 2022',
           quote: 'Make it simple, but significant.',
