@@ -64,10 +64,10 @@
           <a href="#" class="blog__pages_link" data-page="1">
                 01
             </a></li>
-        <li :class="{page__active: currentPage === 2, blog__pages_item: currentPage !== 1}" ><a href="#" class="blog__pages_link" data-page="2">
+        <li :class="{page__active: currentPage === 2, blog__pages_item: currentPage !== 2}" ><a href="#" class="blog__pages_link" data-page="2">
                 02
             </a></li>
-        <li :class="{page__active: currentPage === 3, blog__pages_item: currentPage !== 1}" ><a href="#" class="blog__pages_link" data-page="3">
+        <li :class="{page__active: currentPage === 3, blog__pages_item: currentPage !== 3}" ><a href="#" class="blog__pages_link" data-page="3">
                 03
             </a></li>
         <li class="blog__pages_item">

@@ -20,27 +20,32 @@
       </div>
 
       <div class=" projects__gallery">
-        <ProjectBlock v-for="project in projectsFilteredByCategories" :key="project.id" :project="project"
-          class="projects__box" />
+        <ProjectBlock v-for="project in renderedProjects" :key="project.id" :project="project" class="projects__box" />
       </div>
 
-      <ul class="projects__pages_list">
-        <li class="projects__pages_item"><a href="#" class="projects__pages_link">
+      <ul class="projects__pages_list" @click="getCurrentPage">
+        <li :class="{ page__active: currentPage === 1, projects__pages_item: currentPage !== 1 }">
+          <a href="#" class="projects__pages_link" data-page="1">
             01
-          </a></li>
-        <li class="projects__pages_item"><a href="#" class="projects__pages_link">
+          </a>
+        </li>
+        <li :class="{ page__active: currentPage === 2, projects__pages_item: currentPage !== 2 }"><a href="#"
+            class="projects__pages_link" data-page="2">
             02
           </a></li>
-        <li class="projects__pages_item"><a href="#" class="projects__pages_link">
+        <li :class="{ page__active: currentPage === 3, projects__pages_item: currentPage !== 3 }"><a href="#"
+            class="projects__pages_link" data-page="3">
             03
           </a></li>
-        <li class="projects__pages_item"><a href="#" class="projects__pages_link">
+        <li class="projects__pages_item">
+          <a href="#" class="projects__pages_link" @click="navigatePage">
             <svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
 
-          </a></li>
+          </a>
+        </li>
       </ul>
     </section>
   </div>
@@ -53,6 +58,8 @@ export default {
   components: { ProjectBlock },
   data () {
     return {
+      perPage: 6,
+      currentPage: 1,
       categories: [{
         name: 'Bathroom',
         isActive: false
@@ -113,6 +120,90 @@ export default {
           subheading: 'Decor / Artchitecture',
           category: 'Bathroom',
           img: require('../assets/projects/project-6.jpg')
+        },
+        {
+          id: 7,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bedroom',
+          img: require('../assets/projects/project-7.jpg')
+        },
+        {
+          id: 8,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bathroom',
+          img: require('../assets/projects/project-8.jpg')
+        },
+        {
+          id: 9,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Kitchen',
+          img: require('../assets/projects/project-9.jpg')
+        },
+        {
+          id: 10,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Living Area',
+          img: require('../assets/projects/project-10.jpg')
+        },
+        {
+          id: 11,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bedroom',
+          img: require('../assets/projects/project-11.jpg')
+        },
+        {
+          id: 12,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bathroom',
+          img: require('../assets/projects/project-12.jpg')
+        },
+        {
+          id: 13,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bedroom',
+          img: require('../assets/projects/project-1.jpg')
+        },
+        {
+          id: 14,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bathroom',
+          img: require('../assets/projects/project-2.jpg')
+        },
+        {
+          id: 15,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Kitchen',
+          img: require('../assets/projects/project-3.jpg')
+        },
+        {
+          id: 16,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Living Area',
+          img: require('../assets/projects/project-4.jpg')
+        },
+        {
+          id: 17,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bedroom',
+          img: require('../assets/projects/project-5.jpg')
+        },
+        {
+          id: 18,
+          heading: 'Classic Minimal Bedroom',
+          subheading: 'Decor / Artchitecture',
+          category: 'Bathroom',
+          img: require('../assets/projects/project-6.jpg')
         }
       ]
     }
@@ -128,20 +219,33 @@ export default {
           element.isActive = !element.isActive
         }
       })
+    },
+    getCurrentPage (event) {
+      event.preventDefault()
+      if (event.target.tagName === 'A') {
+        this.currentPage = Number(event.target.dataset.page)
+      }
+    },
+    navigatePage () {
+      if (this.currentPage === 3) {
+        this.currentPage = 1
+      } else this.currentPage += 1
     }
   },
   computed: {
-    projectsFilteredByCategories () {
-      const filteredProjects = []
+    renderedProjects () {
+      let currentProjects = []
       if (!this.currentCategory) {
-        return this.projects
+        currentProjects = JSON.parse(JSON.stringify(this.projects))
+        const index = this.currentPage * this.perPage - this.perPage
+        return currentProjects.splice(index, this.perPage)
       }
       this.projects.forEach(project => {
         if (this.currentCategory === project.category) {
-          filteredProjects.push(project)
+          currentProjects.push(project)
         }
       })
-      return filteredProjects
+      return currentProjects
     }
   }
 
@@ -224,6 +328,7 @@ export default {
   &__box {
     width: 585px;
     margin-bottom: 25px;
+    position: relative;
 
   }
 
@@ -275,5 +380,11 @@ export default {
       ;
     }
   }
+}
+
+.page__active {
+  border: none;
+  background-color: #F4F0EC;
+  border-radius: 50%;
 }
 </style>
