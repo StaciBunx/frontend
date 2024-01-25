@@ -323,6 +323,7 @@ export default {
   &__gallery {
     column-count: 2;
     margin-bottom: 100px;
+    column-gap: 50px;
   }
 
   &__box {
