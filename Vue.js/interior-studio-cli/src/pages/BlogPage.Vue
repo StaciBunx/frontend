@@ -36,10 +36,8 @@
 </section>
 
 <section class="blog center">
-    <a href="./articles.html">
-        <h2 class="blog__latest_heading">Articles & News</h2>
-    </a>
-    <div id="app" class="blog__box">
+  <router-link to="/articles"><h2 class="blog__latest_heading">Articles & News</h2></router-link>
+    <div class="blog__box">
         <div v-for="item in paginatedArticles" :key="item.id">
             <div class="blog__item">
                 <img :src="item.src" alt="blog image" class="blog__img"
@@ -48,15 +46,15 @@
                 <h3 class="blog__heading">{{item.heading}}</h3>
                 <div class="blog__content">
                     <time datetime="2022-12-26" class="blog__date">{{item.date}}</time>
-                    <a href="#" class="blog__more">
+                      <router-link to="/articles" class="blog__more">
                         <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </a>
-                </div>
+                      </router-link>
+                  </div>
             </div>
         </div>
     </div>
