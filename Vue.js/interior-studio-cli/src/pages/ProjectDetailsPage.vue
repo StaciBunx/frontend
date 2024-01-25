@@ -49,6 +49,8 @@ export default {
 }
 </script>
 <style lang="scss">
+@import "../styles/vars";
+
 .details {
   padding-top: 200px;
 
@@ -94,7 +96,7 @@ export default {
   }
 
   &__item {
-    border: 2px solid black;
+    border: 2px solid $black;
     width: 20px;
     height: 20px;
     border-radius: 50%;
